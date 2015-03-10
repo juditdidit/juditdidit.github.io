@@ -43,6 +43,7 @@ html, body {
 	font-size: 16px;
 	line-height: 1.5;
 	height: 100%;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -391,17 +392,7 @@ hr {
 .white-box {
 	height: (@smaller-spacing - 20px);
 	background-color: @bg-light;
-	-webkit-transition: 0.4s;
-	-moz-transition: 0.4s;
-	-o-transition: 0.4s;
-	transition: 0.4s;
 }
-
-.collapsing + .white-box, 
-.collapse.in + .white-box {
-	height: 0;
-}
-
 
 .steps {
 	.step {
@@ -412,7 +403,7 @@ hr {
 			float: left;
 			width: 80px;
 			height: 80px;
-			margin-top: 5px;
+			margin-top: 8px;
 			margin-right: 30px;
 			display: block;
 			border: 3px solid @accent-sub;
@@ -691,13 +682,26 @@ footer {
 	#header {
 		#topnav {
 			.logo {
-				float: none;
-				display: block;
+				float: left;
+				padding-right: 15px;
 			}
 
 			.nav {
-				float: none;
-				display: block;
+				float: left;
+
+				li {
+					border-left: 1px solid rgba(255,255,255,0.2);
+					font-size: 0.85rem;
+
+					a {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+
+					span.hide-small {
+						display: none;
+					}
+				}
 			}
 		}
 	}
