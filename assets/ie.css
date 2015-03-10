@@ -18,6 +18,7 @@
 .featured .row {
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
 .featured .row .logo {
@@ -25,6 +26,7 @@
 	margin: 0px auto;
 	padding: 0;
 	width: 25%;
+	float: left;
 }
 
 .featured .row .logo img {
