@@ -41,9 +41,14 @@ footer .row {
 
 footer .row > div {
 	padding: 0;
-	margin: 0;
+	margin: 0 -15px;
 	width: 20%;
 	float: left;
+}
+
+footer .nav,
+footer article {
+	padding: 0px 15px;
 }
 
 footer .row .col-wider {
