@@ -41,11 +41,11 @@ footer .row {
 
 footer .row > div {
 	padding: 0;
-	margin: 0 -15px;
 	width: 20%;
 	float: left;
 }
 
+footer .section-title,
 footer .nav,
 footer article {
 	padding: 0px 15px;
