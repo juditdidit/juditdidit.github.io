@@ -12,6 +12,7 @@
 
 .featured { 
 	margin: 0px auto;
+	padding: 0;
 }
 
 .featured .row {
