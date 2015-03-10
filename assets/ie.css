@@ -9,3 +9,23 @@
 	background-image: url('img/slogan-bg.png');
 	background-repeat: repeat;
 }
+
+.featured { 
+	margin: 0px auto;
+}
+
+.featured .row {
+	padding: 0;
+	margin: 0;
+}
+
+.featured .row .logo {
+	text-align: center;
+	margin: 0px auto;
+	padding: 0;
+	width: 25%;
+}
+
+.featured .row .logo img {
+	max-width: 80%;
+}
