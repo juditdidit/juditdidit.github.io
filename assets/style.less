@@ -195,7 +195,8 @@ hr {
 			-o-transition: color 0.4s;
 			transition: color 0.4s;
 
-			&:hover {
+			&:hover,
+			&:active {
 				color: lighten(@bg-darkest,50%);
 			}
 		}
@@ -204,7 +205,8 @@ hr {
 			color: lighten(@bg-darkest,50%);
 			font-weight: 500;
 
-			&:hover {
+			&:hover,
+			&:active {
 				color: lighten(@bg-darkest,65%);
 			}
 		}
