@@ -32,3 +32,20 @@
 .featured .row .logo img {
 	max-width: 80%;
 }
+
+footer .row {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+footer .row > div {
+	padding: 0;
+	margin: 0;
+	width: 20%;
+	float: left;
+}
+
+footer .row .col-wider {
+	width: 30%
+}
