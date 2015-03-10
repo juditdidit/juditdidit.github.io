@@ -91,6 +91,16 @@ a {
 	}
 }
 
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none; 
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,117,209,0.5);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,117,209,0.5);
+	box-shadow: 0px 0px 5px 1px rgba(0,117,209,0.5);
+}
+
 hr {
 	margin: @smaller-spacing 0;
 	padding: 0;
@@ -165,6 +175,15 @@ hr {
 .section {
 	padding: @smaller-spacing 0;
 	background-color: @bg-light;
+
+	button:focus,
+	input:focus,
+	textarea:focus,
+	select:focus {
+		-webkit-box-shadow: 0px 0px 5px 1px rgba(96,185,255,0.5);
+		-moz-box-shadow: 0px 0px 5px 1px rgba(96,185,255,0.5);
+		box-shadow: 0px 0px 5px 1px rgba(96,185,255,0.5);
+	}
 
 	.section-title {
 		font-size: 24px;
@@ -343,7 +362,6 @@ hr {
 		font-weight: 300;
 
 		.search {
-			padding-right: 54px;
 			position: relative;
 
 			button {
@@ -351,8 +369,8 @@ hr {
 				height: 54px;
 				font-size: 20px;
 				border: none;
-				background-color: lighten(@bg-darkest, 5%);
-				border-radius: 0px 4px 4px 0px;
+				background-color: transparent;
+				border-radius: 0;
 				position: absolute;
 				top: 0;
 				right: 0;
