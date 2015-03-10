@@ -58,7 +58,7 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 35px;
+	font-size: 32px;
 }
 
 h2 {
@@ -308,7 +308,7 @@ hr {
 		width: 100%;
 		position: absolute;
 		top: 50%;
-		margin-top: -82px;
+		margin-top: -78px;
 
 		h1 {
 			color: @font-light;
@@ -523,7 +523,7 @@ footer {
 
 	.logo {
 		display: block;
-		height: 50px;
+		height: (@nav-size-small - 20px);
 		text-align: center;
 		margin: @smaller-spacing 0 0;
 
@@ -591,6 +591,10 @@ footer {
 				display: inline;
 			}
 		}
+
+		.logo {
+			height: @nav-size-small;
+		}
 	}
 }
 
@@ -629,6 +633,10 @@ footer {
 			position: absolute;
 			right: 30px;
 			bottom: 0;
+		}
+
+		.logo {
+			text-align: right;
 		}
 	}
 }
@@ -674,15 +682,19 @@ footer {
 	}
 }
 
-@media screen and (max-height: 800px), screen and (max-width: 768px) {
+@media screen and (max-height: 650px), screen and (max-width: 1024px) {
 	#header {
 		height: auto;
 		padding: 0;
 	}
 
+	h1, h2, h3 {
+		font-size: 28px;
+	}
+
 	#hero {
 		height: auto;
-		padding: (@smaller-spacing * 2 + @nav-size) 0;
+		padding: (@large-spacing + @nav-size) 0;
 
 		#slogan {
 			position: static;
@@ -708,7 +720,6 @@ footer {
 				float: left;
 
 				li {
-					border-left: 1px solid rgba(255,255,255,0.2);
 					font-size: 0.85rem;
 
 					a {
@@ -720,12 +731,16 @@ footer {
 						display: none;
 					}
 				}
+
+				li + li {
+					border-left: none;
+				}
 			}
 		}
 	}
 
-	h1 {
-		font-size: 32px;
+	#hero {
+		padding: (@smaller-spacing + @smaller-spacing / 2) 0 @smaller-spacing;
 	}
 }
 
