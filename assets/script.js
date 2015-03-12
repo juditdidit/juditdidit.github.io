@@ -5,12 +5,10 @@ $(function() {
 
 
 	$("#dropdown-toggle").click(function() {
-		if ($('#dropdown-toggle').attr('aria-expanded') == false) {
-			console.log('test');
+		if ($('#dropdown-toggle').attr('aria-expanded') === 'false') {
+			$('html, body').animate({
+				scrollTop: $("#start").offset().top
+			}, 500);
 		}
-
-		// $('html, body').animate({
-		// 	scrollTop: $("#start").offset().top
-		// }, 500);
 	});
 });
