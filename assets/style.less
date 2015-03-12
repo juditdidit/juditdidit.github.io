@@ -646,24 +646,31 @@ table.results {
 		font-size: 14px;
 		z-index: 2;
 
-		&:before {
-			content: '';
-			display: block;
-			width: 100%;
-			position: absolute;
-			left: 0;
-			background-color: @accent-main;
-			height: @nav-size-small;
-			z-index: -1;
+		tr {
+			td {
+				border-width: 0px 1px;
+				border-style: solid;
+				border-color: lighten(@accent-main,4%);
+				line-height: @nav-size-small;
+				padding: 0px 30px;
+				position: relative;
+				z-index: 2;
+			}
 		}
+	}
 
-		td {
-			border-width: 0px 1px;
-			border-style: solid;
-			border-color: lighten(@accent-main,4%);
-			line-height: @nav-size-small;
-			padding: 0px 30px;
-			position: relative;
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: @bg-darker;
+				border-width: 1px 0px;
+				border-style: solid;
+				border-color: darken(@bg-light,6%);
+			}
+
+			td {
+				padding: 20px 30px;
+			}
 		}
 	}
 }
