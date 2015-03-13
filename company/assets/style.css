@@ -1,0 +1,428 @@
+/* colors
+	@accent-main: #8957D8;
+	@accent-sub: #0075D1;
+
+	@font-norm: #7c7c7c;
+	@font-darker: #414141;
+
+	@background-lighter: #ffffff;
+	@background-darker: #f5f4f5;
+
+	@background-darkest: #595959;
+	@footer-header: #cccccc;
+	@footer-text: #979498;
+*/ 
+
+html, body {
+	font-weight: 300;
+	color: #7c7c7c;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 50px;
+}
+
+h2 {
+	font-weight: 100;
+	font-size: 38px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+h3 {
+	font-weight: 100;
+	font-size: 32px;
+}
+
+p.subtitle {
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 500;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #414141;
+}
+
+hr {
+	margin: 50px 0;
+	padding: 0;
+	height: 1px;
+	background-color: #696869;
+	border: none;
+}
+
+.btn {
+	background-color: #f5f4f5;
+	padding: 15px 25px;
+	color: #7c7c7c;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 10px;
+	border: none;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #e3e2e2;
+	color: #414141;
+}
+
+.btn.btn-accent {
+	background-color: #8957D8;
+	color: #DFCFF5;
+	-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+}
+
+.btn.btn-accent:hover,
+.btn.btn-accent:active {
+	background-color: #7D52BB;
+}
+
+.nav.nav-topic li {
+	padding: 4px 0;
+}
+
+.nav.nav-topic a {
+	padding: 0;
+}
+
+.nav.nav-topic a:hover,
+.nav.nav-topic a:active {
+	background-color: transparent;
+}
+
+.section, footer {
+	padding: 70px 0;
+}
+
+.section {
+	background-color: #ffffff;
+}
+
+.section-darker {
+	background-color: #f5f4f5;
+}
+
+.section-darkest {
+	background-color: #595959;
+}
+
+.container-small {
+	max-width: 900px;
+}
+
+#header {
+	background-color: #CDCEC5;
+}
+
+#header #topnav {
+	height: 70px;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+#header #topnav .container-fluid {
+	padding: 0;
+}
+
+#header #topnav .logo {
+	display: block;
+	height: 70px;
+	padding: 10px 25px;
+	float: left;
+}
+
+#header #topnav .logo img {
+	display: block;
+	height: 100%;
+}
+
+#header #topnav .nav {
+	float: right;
+	font-size: 0.0001px;
+	line-height: 0.0001px;
+}
+
+#header #topnav .nav li {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+#header #topnav .nav li + li {
+	border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+#header #topnav .nav li a {
+	padding: 30px 25px 20px;
+	color: #ffffff;
+}
+
+#header #topnav .nav li a:hover,
+#header #topnav .nav li a:active {
+	background-color: rgba(255,255,255,0.1);
+}
+
+#hero {
+	background-image: url('img/hero.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	height: calc(100vh - 299px);
+	position: relative;
+}
+
+#hero #slogan {
+	background-color: rgba(137,87,216,0.6);
+	text-align: center;
+	padding: 40px 0;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -100px;
+}
+
+#hero #slogan h1 {
+	color: #ffffff;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#start {
+	text-align: center;
+}
+
+#dropdown {
+	position: relative;
+	margin-top: -50px;
+	color: #979498;
+}
+
+#dropdown:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #595959 transparent;
+}
+
+#dropdown .subtitle {
+	color: #cccccc;
+}
+
+#dropdown a {
+	font-weight: 300;
+}
+
+#dropdown a:hover,
+#dropdown a:active {
+	color: #cccccc;
+}
+
+#dropdown form {
+	font-weight: 300;
+}
+
+#dropdown .search {
+	padding-right: 54px;
+	position: relative;
+}
+
+#dropdown input {
+	width: 100%;
+	background-color: #696869;
+	border: none;
+	border-radius: 4px 0px 0px 4px;
+	padding: 15px 25px;
+	line-height: 24px;
+}
+
+#dropdown .search button {
+	width: 54px;
+	height: 54px;
+	font-size: 20px;
+	border: none;
+	background-color: #696869;
+	border-radius: 0px 4px 4px 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#dropdown button:hover,
+#dropdown button:active {
+	color: #cccccc;
+}
+
+.steps .step {
+	overflow: hidden;
+	position: relative;
+}
+
+.steps .step + .step {
+	margin-top: 70px;
+}
+
+.steps .circle {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-top: 5px;
+	margin-right: 30px;
+	display: block;
+	border: 3px solid #0075D1;
+	border-radius: 100%;
+	text-align: center;
+	color: #0075D1;
+	line-height: 76px;
+	font-size: 32px;
+	font-weight: 100;
+}
+
+.steps .accent-main .circle {
+	border-color: #8957D8;
+	color: #8957D8;
+}
+
+.steps h3,
+.steps p.subtitle {
+	margin-bottom: 10px;
+}
+
+.steps .accent-main h3,
+.steps .accent-main p.subtitle {
+	color: #8957D8;
+}
+
+.steps .accent-sub h3,
+.steps .accent-sub p.subtitle {
+	color: #0075D1;
+}
+
+.steps .info {
+	padding-left: 120px;
+	padding-right: 330px;
+}
+
+.steps .icon {
+	float: right;
+	width: 150px;
+}
+
+.steps .icon img {
+	display: block;
+	width: 100%;
+}
+
+.section .featured .logo {
+	text-align: center;
+	margin: 0 auto;
+}
+
+footer {
+	background-color: #595959;
+	color: #979498;
+}
+
+footer .container {
+	position: relative;
+	padding-bottom: 90px;
+}
+
+footer a {
+	font-weight: 300;
+	padding: 0;
+	color: #979498;
+}
+
+footer a:hover,
+footer a:active {
+	color: #cccccc;
+}
+
+footer article a {
+	font-weight: 500;
+	color: #cccccc;
+}
+
+footer article a:hover,
+footer article a:active {
+	color: #e7e7e7;
+	text-decoration: none;
+}
+
+footer .section-title {
+	font-size: 22px;
+	font-weight: 100;
+	color: #cccccc;
+}
+
+footer .bottomnav ul {
+	font-size: 0.0001px;
+	line-height: 0.0001px;
+}
+
+footer .bottomnav ul li {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-right: 30px;
+}
+
+footer .bottomnav ul li a {
+	padding: 0;
+}
+
+footer .logo {
+	height: 50px;
+	display: block;
+}
+
+footer .logo img {
+	display: inline-block;
+	height: 100%;
+}
+
+footer #copyright a {
+	font-weight: 500;
+}
+
+footer .left {
+	position: absolute;
+	left: 15px;
+	bottom: 0;
+}
+
+footer .right {
+	text-align: right;
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+}
