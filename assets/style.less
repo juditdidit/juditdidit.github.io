@@ -137,17 +137,25 @@ hr {
 		color: darken(@font-norm,10%);
 	}
 
+	&&-small {
+		font-size: 12px;
+		letter-spacing: 0;
+		line-height: 20px;
+		padding: 10px 20px;
+		margin: 0;
+	}
+
 	&&-accent {
 		background-color: @accent-main;
 		color: lighten(@accent-main,30%);
 		-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
 		-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
 		box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
-	}
-
-	&:hover,
-	&:active {
-		background-color: darken(@accent-main, 4%);
+		
+		&:hover,
+		&:active {
+			background-color: darken(@accent-main, 4%);
+		}
 	}
 }
 
@@ -634,43 +642,136 @@ hr {
 	}
 }
 
-table.results {
+table {
 	width: 100%;
-	margin-top: 20px;
 
 	thead {
 		background-color: @accent-main;
 		color: lighten(@accent-main,30%);
 		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-size: 14px;
-		z-index: 2;
+		font-size: 13px;
+		font-weight: 400;
+		text-align: center;
 
 		tr {
 			td {
+				line-height: @nav-size-small;
+				padding: 0px 30px;
 				border-width: 0px 1px;
 				border-style: solid;
 				border-color: lighten(@accent-main,4%);
-				line-height: @nav-size-small;
-				padding: 0px 30px;
-				position: relative;
-				z-index: 2;
 			}
 		}
 	}
 
 	tbody {
+		border-width: 0px 1px 1px;
+		border-style: solid;
+		border-color: darken(@bg-light,6%);
+		font-size: 28px;
+		line-height: 1.2;
+
 		tr {
+			-webkit-transition: background-color 0.4s;
+			-moz-transition: background-color 0.4s;
+			-o-transition: background-color 0.4s;
+			transition: background-color 0.4s;
+
+			&:hover {
+				background-color: lighten(@accent-sub,56%);
+
+				.btn {
+					color: @font-light;
+					background-color: @accent-sub;
+
+					&:hover {
+						background-color: darken(@accent-sub,6%);
+					}
+				}
+			}
+
 			&:nth-child(even) {
-				background-color: @bg-darker;
+				background-color: lighten(@bg-darker,2%);
 				border-width: 1px 0px;
 				border-style: solid;
 				border-color: darken(@bg-light,6%);
+
+				&:hover {
+					background-color: lighten(@accent-sub,55%);
+
+					.btn {
+						color: @font-light;
+						background-color: @accent-sub;
+					}
+				}
+
+				.btn {
+					background-color: darken(@btn-bg,4%);
+				}
 			}
 
 			td {
 				padding: 20px 30px;
+				text-align: center;
+
+				.esavings {
+					color: #98be3b;
+				}
+
+				.purchase-price {
+					font-size: 125%;
+				}
 			}
+		}
+	}
+
+	small {
+		display: block;
+		font-size: 12px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.product {
+		.left,
+		.right {
+			width: 50%;
+			float: left;
+		}
+
+		.right {
+			text-align: left;
+			padding-left: 20px;
+		}
+
+		.rating {
+			margin-top: 20px;
+			font-size: 16px;
+			position: relative;
+			color: darken(@bg-darker,4%);
+			letter-spacing: 1px;
+		}
+	}
+
+	.pos-ret .score {
+		circle {
+			color: @bg-light;
+			fill: currentColor;
+		}
+
+		.indicator {
+			color: @accent-sub;
+			fill: currentColor;
+		}
+
+		.outer {
+			color: darken(@bg-darker,4%);
+			fill: currentColor;
+		}
+
+		text {
+			color: @accent-main;
+			fill: currentColor;
 		}
 	}
 }
