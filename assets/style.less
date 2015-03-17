@@ -1029,63 +1029,54 @@ hr {
 
 
 
-			/* entire container, keeps perspective */
 			.card {
 				-webkit-perspective: 1000;
 				-moz-perspective: 1000;
 				perspective: 1000;
-			}
 
-			/* flip the pane when hovered */
-			.card:hover .card-content,
-			.card.hover .card-content {
-				-webkit-transform: rotateY(180deg);
-				-moz-transform: rotateY(180deg);
-				-ms-transform: rotateY(180deg);
-				transform: rotateY(180deg);
-			}
+				&.hover .card-content {
+					-webkit-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					-ms-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+				}
 
-			.card-face,
-			.card-back {
-				width: 100%;
-				height: 100%;
-			}
+				.card-content {
+					-webkit-transition: 0.6s;
+					-moz-transition: 0.6s;
+					transition: 0.6s;
+					-webkit-transform-style: preserve-3d;
+					-moz-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+					position: relative;
+				}
 
-			/* flip speed goes here */
-			.card-content {
-				-webkit-transition: 0.6s;
-				-moz-transition: 0.6s;
-				transition: 0.6s;
-				-webkit-transform-style: preserve-3d;
-				-moz-transform-style: preserve-3d;
-				transform-style: preserve-3d;
-				position: relative;
-			}
+				.card-face,
+				.card-back {
+					width: 100%;
+					height: 100%;
+					-webkit-backface-visibility: hidden;
+					-moz-backface-visibility: hidden;
+					backface-visibility: hidden;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 
-			/* hide back of pane during swap */
-			.card-face,
-			.card-back {
-				-webkit-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				backface-visibility: hidden;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
+				.card-face {
+					z-index: 2;
+					-webkit-transform: rotateY(0deg);
+					-moz-transform: rotateY(0deg);
+					-ms-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+				}
 
-			.card-face {
-				z-index: 2;
-				-webkit-transform: rotateY(0deg);
-				-moz-transform: rotateY(0deg);
-				-ms-transform: rotateY(0deg);
-				transform: rotateY(0deg);
-			}
-
-			.card-back {
-				-webkit-transform: rotateY(180deg);
-				-moz-transform: rotateY(180deg);
-				-ms-transform: rotateY(180deg);
-				transform: rotateY(180deg);
+				.card-back {
+					-webkit-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					-ms-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+				}
 			}
 		}
 	}

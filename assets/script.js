@@ -11,4 +11,13 @@ $(function() {
 			}, 500);
 		}
 	});
+
+	$(".results-cards .card button").click(function(e) {
+		e.preventDefault();
+
+		var toggleButton = $(this);
+		var toggleCard = toggleButton.closest('.card'); 
+
+		toggleCard.toggleClass('hover');
+	});
 });
