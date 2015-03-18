@@ -18,6 +18,6 @@ $(function() {
 		var toggleButton = $(this);
 		var toggleCard = toggleButton.closest('.card'); 
 
-		toggleCard.toggleClass('hover');
+		toggleCard.toggleClass('flip');
 	});
 });

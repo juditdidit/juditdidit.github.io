@@ -922,123 +922,31 @@ hr {
 				display: block;
 				width: 100%;
 				height: 100%;
-				background-color: @bg-light;
+				/*background-color: @bg-light;
 				border-radius: 4px;
-				border: 1px solid darken(@bg-darker,2%);
+				border: 1px solid darken(@bg-darker,2%);*/
 				font-weight: 300;
 				color: @font-norm;
-
-				&:hover,
-				&:active {
-					border: 1px solid darken(@bg-darker,10%);
-					-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
-					-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
-					box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);	
-				}
-			}
-
-			.product-name,
-			.product-specs,
-			.product-rating,
-			.product-info {
-				padding: 20px;
-			}
-
-			.product-name {
-				border-bottom: 1px solid @bg-darker;
-				position: relative;
-				overflow: hidden;
-
-				img.product {
-					width: 125px;
-					float: left;
-					padding-right: 20px;
-				}
-
-				h2 {
-					font-size: 28px;
-					line-height: 1.2;
-					margin: 0;
-				}
-
-				.product-id {
-					display: block;
-					font-size: 12px;
-					line-height: 1;
-					text-transform: uppercase;
-				}
-
-				button {
-					background: none;
-					border: none;
-					position: absolute;
-					top: 10px;
-					right: 10px;
-					color: lighten(@font-norm, 35%);
-
-					&:hover,
-					&:active {
-						color: @font-norm;
-					}
-				}
-			}
-
-			.product-specs {
-				.e-score {
-					float: left;
-					width: 125px;
-					padding-right: 20px;
-					text-align: center;
-				}
-
-				.specs {
-					padding-left: 125px;
-				}
-			}
-
-			.product-rating {
-				.rating {
-					margin-top: 20px;
-					font-size: 17px;
-					position: relative;
-					color: darken(@bg-darker,4%);
-					letter-spacing: 1px;
-					width: 84px;
-					display: inline-block;
-
-					.full {
-						color: @accent-main;
-						position: absolute;
-						top: 0;
-						left: 0;
-						overflow: hidden;
-
-						span {
-							display: block;
-							width: 84px;
-						}
-					}
-				}
-
-				p {
-					margin: 0;
-					margin-left: 24px;
-					display: inline-block;
-				}
-			}
-
-
-
-			.card {
 				-webkit-perspective: 1000;
 				-moz-perspective: 1000;
 				perspective: 1000;
 
-				&.hover .card-content {
+				&.flip .card-content {
 					-webkit-transform: rotateY(180deg);
 					-moz-transform: rotateY(180deg);
 					-ms-transform: rotateY(180deg);
 					transform: rotateY(180deg);
+				}
+
+				&:hover .card-content,
+				&Pactive .card-content {
+					.card-face, 
+					.card-back {
+						border: 1px solid darken(@bg-darker,8%);
+						-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+						-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+						box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+					}
 				}
 
 				.card-content {
@@ -1049,33 +957,130 @@ hr {
 					-moz-transform-style: preserve-3d;
 					transform-style: preserve-3d;
 					position: relative;
-				}
-
-				.card-face,
-				.card-back {
 					width: 100%;
 					height: 100%;
-					-webkit-backface-visibility: hidden;
-					-moz-backface-visibility: hidden;
-					backface-visibility: hidden;
-					position: absolute;
-					top: 0;
-					left: 0;
+
+					.card-face,
+					.card-back {
+						background-color: @bg-light;
+						border-radius: 4px;
+						border: 1px solid darken(@bg-darker,2%);
+						width: 100%;
+						height: 100%;
+						-webkit-backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						backface-visibility: hidden;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+
+					.card-face {
+						z-index: 2;
+						-webkit-transform: rotateY(0deg);
+						-moz-transform: rotateY(0deg);
+						-ms-transform: rotateY(0deg);
+						transform: rotateY(0deg);
+					}
+
+					.card-back {
+						-webkit-transform: rotateY(180deg);
+						-moz-transform: rotateY(180deg);
+						-ms-transform: rotateY(180deg);
+						transform: rotateY(180deg);
+					}
 				}
 
-				.card-face {
-					z-index: 2;
-					-webkit-transform: rotateY(0deg);
-					-moz-transform: rotateY(0deg);
-					-ms-transform: rotateY(0deg);
-					transform: rotateY(0deg);
+				.product-name {
+					padding: 20px;
+					border-bottom: 1px solid @bg-darker;
+					position: relative;
+					overflow: hidden;
+
+					img.product {
+						width: 125px;
+						float: left;
+						padding-right: 20px;
+					}
+
+					h2 {
+						font-size: 28px;
+						line-height: 1.2;
+						margin: 0;
+					}
+
+					.product-id {
+						display: block;
+						font-size: 12px;
+						line-height: 1;
+						text-transform: uppercase;
+					}
+
+					button {
+						background: none;
+						border: none;
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						top: 0px;
+						right: 0px;
+						font-size: 16px;
+						line-height: 16px;
+						color: lighten(@font-norm, 35%);
+
+						&:hover,
+						&:active {
+							color: @font-norm;
+						}
+					}
 				}
 
-				.card-back {
-					-webkit-transform: rotateY(180deg);
-					-moz-transform: rotateY(180deg);
-					-ms-transform: rotateY(180deg);
-					transform: rotateY(180deg);
+				.product-specs {
+					padding: 20px 20px 0px;
+
+					.e-score {
+						float: left;
+						width: 125px;
+						padding-right: 20px;
+						text-align: center;
+					}
+
+					.specs {
+						padding-left: 125px;
+					}
+				}
+
+				.product-rating {
+					padding: 0px 20px 20px;
+
+					.rating {
+						margin-top: 20px;
+						font-size: 17px;
+						position: relative;
+						color: darken(@bg-darker,4%);
+						letter-spacing: 1px;
+						width: 84px;
+						display: inline-block;
+
+						.full {
+							color: @accent-main;
+							position: absolute;
+							top: 0;
+							left: 0;
+							overflow: hidden;
+
+							span {
+								display: block;
+								width: 84px;
+							}
+						}
+					}
+
+					p {
+						margin: 0;
+						margin-left: 24px;
+						display: inline-block;
+					}
 				}
 			}
 		}
