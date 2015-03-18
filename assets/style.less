@@ -877,6 +877,10 @@ hr {
 				text-align: center;
 			}
 
+			.right {
+				margin-top: 10px;
+			}
+
 			.rating {
 				margin-top: 20px;
 				margin-left: auto;
@@ -1452,6 +1456,7 @@ footer {
 			text-align: right;
 
 			img {
+				max-width: 100%;
 				display: inline-block;
 			}
 		}
@@ -1553,19 +1558,39 @@ footer {
 				}
 			}
 
-			tbody tr {
-				td,
-				td:first-child,
-				td:last-child {
-					padding-left: 15px;
-					padding-right: 15px;
+			tbody {
+				font-size: 24px;
+
+				tr {
+					td,
+					td:first-child,
+					td:last-child {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
 				}
+			}
+
+			small {
+				font-size: 10px;
 			}
 
 			.product {
 				.left {
 					img {
 						width: 70px;
+						max-width: 100%;
+					}
+				}
+
+				.rating {
+					font-size: 13px;
+					width: 66px;
+
+					.full {
+						span {
+							width: 66px;
+						}
 					}
 				}
 			}
