@@ -122,7 +122,7 @@ hr {
 	padding: 15px 25px;
 	color: @font-norm;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 16px;
 	line-height: 24px;
 	margin-bottom: 10px;
@@ -867,7 +867,7 @@ hr {
 		small {
 			display: block;
 			font-size: 12px;
-			line-height: 1;
+			line-height: 1.2;
 			text-transform: uppercase;
 		}
 
@@ -1025,7 +1025,7 @@ hr {
 						margin-top: 2px;
 						display: block;
 						font-size: 12px;
-						line-height: 1;
+						line-height: 1.2;
 						text-transform: uppercase;
 					}
 
@@ -1074,7 +1074,7 @@ hr {
 						small {
 							display: block;
 							font-size: 12px;
-							line-height: 1;
+							line-height: 1.2;
 							text-transform: uppercase;
 							margin-bottom: -2px;
 						}
@@ -1549,12 +1549,16 @@ footer {
 
 	.results {
 		table {
-			thead tr {
-				td,
-				td:first-child,
-				td:last-child {
-					padding-left: 15px;
-					padding-right: 15px;
+			thead {
+				font-size: 10px;
+
+				tr {
+					td,
+					td:first-child,
+					td:last-child {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
 				}
 			}
 
@@ -1599,8 +1603,7 @@ footer {
 				.btn.btn-small {
 					font-size: 10px;
 					font-weight: 500;
-					padding-left: 15px;
-					padding-right: 15px;
+					padding: 5px 10px;
 				}
 			}
 		}
