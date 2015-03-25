@@ -24,19 +24,19 @@
     <script src="assets/script.js" type="text/javascript"></script>
 </head>
 
-<body id="home" class="preload">
-	<header id="header">
+<body class="preload">
+	<header id="header" class="has-hero has-hero-tall">
 		<nav id="topnav">
 			<div class="container-fluid">
-				<a class="logo" href="index.html"><img src="assets/img/enervee-logo-white.png" alt="Enervee Corporation"></a>
+				<a class="logo" href="/"><img src="assets/img/enervee-logo-white.png" alt="Enervee Corporation"></a>
 				<ul class="nav">
 					<li><a href=""><span class="hide-small">enervee </span>for business</a></li>
-					<li><a href="">support</a></li>
+					<li><a href="/support/">support</a></li>
 				</ul>
 			</div>
 		</nav>
 
-		<section id="hero" class="hero">
+		<section id="hero">
 			<div id="slogan">
 				<div class="container">
 					<h1><span>Stop wasting</span> <span>energy & money.</span><br>
@@ -51,11 +51,11 @@
 			<div class="container">
 				<h2>Save more with the most energy efficient products!</h2>
 
-				<button id="dropdown-toggle" class="btn btn-accent" data-target="#dropdown" aria-expanded="false" data-toggle="collapse">Search for a Product</button>
+				<button type="button" id="dropdown-toggle" class="btn btn-accent" data-target="#dropdown" aria-expanded="false" data-toggle="collapse">Search for a Product</button>
 			</div>
 		</section>
 
-		<section id="dropdown" class="collapse">
+		<section id="dropdown" class="dropdown collapse">
 			<div class="section section-darkest">
 				<div class="container">
 					<p class="subtitle">Search for Products:</p>
@@ -64,7 +64,7 @@
 							<form>
 								<div class="search">
 									<input type="text" placeholder="brand, model, or appliance type...">
-									<button><i class="fa fa-search"></i></button>
+									<button type="button"><i class="fa fa-search"></i></button>
 								</div>
 							</form>
 						</div>
@@ -176,6 +176,26 @@
 		</section>
 
 		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<h2>Video Description Title</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, sodales at velit non, consectetur eleifend nibh. Nunc quam metus, convallis vel felis sit amet, ullamcorper venenatis ante. Phasellus dictum et lorem et faucibus. Morbi convallis tortor et ligula rutrum maximus.
+						</p>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="video-preview">
+							<img src="assets/img/video-preview.jpg" alt="Enervee view preview">
+							<a href="" class="play"><i class="fa fa-play-circle"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-darker">
 			<div class="container featured">
 				<div class="row">
 					<div class="logo col-sm-6 col-md-3"><img src="assets/img/featured-yahoo.png" alt="Yahoo!"></div>
@@ -191,38 +211,38 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-skinny col-xs-6 col-sm-6 col-md-2">
-					<p class="section-title">Discover</p>
+					<p class="title">Discover</p>
 					<ul class="nav nav-topic">
-						<li><a href="">About Us</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Enervee Score&reg;</a></li>
-						<li><a href="">Eco View</a></li>
-						<li><a href="">Press</a></li>
-						<li><a href="">Jobs</a></li>
-						<li><a href="">Utility Programs</a></li>
-						<li><a href="">Data Services</a></li>
-					</ul>
+						<li><a href="/about/">About Us</a></li>
+						<li><a href="//blog.enervee.com/">Blog</a></li>
+						<li><a href="/score/">Enervee Score&reg;</a></li>
+						<li><a href="/eco-view/">Eco View</a></li>
+						<li><a href="/press/">Press</a></li>
+						<li><a href="/jobs/">Jobs</a></li>
+						<li><a href="/utility-programs/">Utility Programs</a></li>
+						<li><a href="/data-services/">Data Services</a></li>
 					</ul>
 				</div>
 
 				<div class="col-skinny col-xs-6 col-sm-6 col-md-2">
-					<p class="section-title">Join Us</p>
+					<p class="title">Join Us</p>
 					<ul class="nav nav-topic">
-						<li><a href="">Enervee U</a></li>
-						<li><a href="">Newsletter</a></li>
-						<li><a href="">Twitter</a></li>
-						<li><a href="">Facebook</a></li>
-						<li><a href="">LinkedIn</a></li>
-						<li><a href="">Google+</a></li>
-						<li><a href="">Pinterest</a></li>
-						<li><a href="">YouTube</a></li>
-					</ul>
+						<li><a href="/energy-efficiency-education-center/" target="_blank">Enervee U</a></li>
+						<li><a href="#popup-newsletter" target="_blank">Newsletter</a></li>
+						<li><a href="https://twitter.com/enerveescore" target="_blank">Twitter</a></li>
+						<li><a href="http://www.facebook.com/enervee" target="_blank">Facebook</a></li>
+						<li><a href="http://www.linkedin.com/company/enervee" target="_blank">LinkedIn</a></li>
+						<li><a href="https://google.com/+Enervee" target="_blank">Google+</a></li>
+						<li><a href="http://pinterest.com/enervee/" target="_blank">Pinterest</a></li>
+						<li><a href="http://www.youtube.com/user/enerveeTV" target="_blank"/energy-efficiency-education-center/>YouTube</a></li>
 					</ul>
 				</div>
 
 				<div class="col-wider hidden-xs hidden-sm col-md-4">
-					<p class="section-title">Latest Tweets</p>
-					<article>
+					<p class="title">Latest Tweets</p>
+
+					[TWITTER FEED GOES HERE]
+					<!-- <article>
 						<p>EnerveeScore: Can renewable energy ignite consumers’ hopes?
 						<br><a href="http://t.co/fe8oWxBaOd">http://t.co/fe8oWxBaOd</a></p>
 					</article>
@@ -230,29 +250,31 @@
 					<article>
 						<p>EnerveeScore: Renewable energy: Buksh joins hands with foreign firms in $400m project
 						<br><a href="http://t.co/xKMXKjCmNu">http://t.co/xKMXKjCmNu</a></p>
-					</article>
+					</article> -->
 				</div>
 
 				<div class="col-wider hidden-xs hidden-sm col-md-4">
-					<p class="section-title">Latest Blog Posts</p>
-					<article>
+					<p class="title">Latest Blog Posts</p>
+
+					[BLOG FEED GOES HEERE]
+					<!-- <article>
 						<p><a href="">President Obama meets Enervee</a>
 						<br>We have many interesting days at Enervee, but last Thursday was certainly one of the more exciting ones: President Obama was visiting Cro... <a href="">Read more</a></p>
-					</article>
+					</article> -->
 				</div>
 			</div>
 
 			<nav class="bottomnav left">
 				<ul class="nav">
-					<li><a href="">Privacy Policy</a></li>
-					<li><a href="">Terms of Use</a></li>
-					<li><a href="">Contact & Feedback</a></li>
+					<li><a href="/privacy/">Privacy Policy</a></li>
+					<li><a href="/legal/">Terms of Use</a></li>
+					<li><a href="/feedback/">Contact & Feedback</a></li>
 				</ul>
 			</nav>
 
 			<div id="copyright" class="right">
-				<a class="logo" href="index.html"><img src="assets/img/enervee-logo-white.png" alt="Enervee Corporation"></a>
-				&copy;2015 <a href="">Enervee Corporation</a>.<span class="break"> </span>All rights reserved.
+				<a class="logo" href="/"><img src="assets/img/enervee-logo-white.png" alt="Enervee Corporation"></a>
+				&copy;2015 <a href="/">Enervee Corporation</a>.<span class="break"> </span>All rights reserved.
 			</div>
 		</div>
 	</footer>
