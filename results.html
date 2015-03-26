@@ -136,32 +136,33 @@
 		<section class="section">
 			<div class="container">
 				<div class="results results-list">
-					<div class="table-header">
-						<div class="container">
-							<table>
-								<thead>
-									<tr>
-										<td class="product">Popularity</td>
-										<td class="e-score">Energy Score <i class="fa fa-info-circle"></i></td>
-										<td class="data-info hidden-xs hidden-sm hidden-md">Screen Size</td>
-										<td class="purchase-price hidden-xs hidden-sm">Purchase Price</td>
-										<td class="e-savings hidden-xs hidden-sm hidden-md">Energy Savings <i class="fa fa-info-circle"></i></td>
-										<td class="button">Details</td>
-									</tr>
-								</thead>
-							</table>
-						</div>
-					</div>
-
 					<div id="results">
 						<table>
 							<thead>
 								<tr>
 									<td class="product">Popularity</td>
-									<td class="e-score">Energy Score <i class="fa fa-info-circle"></i></td>
+									<td class="e-score">
+										Energy Score
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-score-info" class="hover-info-box">
+												<h2>Energy Score out of 100</h2>
+												<p>A universal way of comparing a product's energy use against all similar-sized models.</p>
+											</div>
+										</div>
+									</td>
 									<td class="data-info hidden-xs hidden-sm hidden-md">Screen Size</td>
 									<td class="purchase-price hidden-xs hidden-sm">Purchase Price</td>
-									<td class="e-savings hidden-xs hidden-sm hidden-md">Energy Savings <i class="fa fa-info-circle"></i></td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md">
+										Energy Savings 
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-savings-info" class="hover-info-box">
+												<h2>Energy Savings Over 12 Years</h2>
+												<p>The estimated lifetime electrical energy savings for this product, compared to energy cost for a basic model of this size.</p>
+											</div>
+										</div>
+									</td>
 									<td class="button">Details</td>
 								</tr>
 							</thead>

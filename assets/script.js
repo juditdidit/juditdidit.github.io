@@ -23,14 +23,4 @@ $(function() {
 
 		toggleCard.toggleClass('flip');
 	});
-
-	// results page sticky table header
-	var cellProduct = $('#results tbody td.product').css('width');
-	var cellEScore = $('#results thead td.e-score').css('height');
-
-	console.log(cellProduct + ' ' + cellEScore);
-
-	function stickyTableHeader() {
-		
-	}
 });

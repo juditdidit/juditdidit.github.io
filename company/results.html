@@ -29,46 +29,103 @@
 	<header id="header">
 		<nav id="topnav">
 			<div class="container-fluid">
-				<a class="logo" href="index.html"><img src="assets/img/enervee-logo-color.png" alt="Enervee Corporation"></a>
+				<a class="logo" href="index.html"><img src="http://s3.enervee.com/pge.enervee.com/pge-logo.png" alt="Pacific Gas and Electric Company"></a>
 				
 				<ul class="nav">
-					<li><a href="">your state: CA <i class="fa fa-sort-desc"></i></a></li>
+					<li><a href=""><span class="hidden-xs">your state: </span>CA <i class="fa fa-sort-desc"></i></a></li>
+					<li class="nav-show"><a data-toggle="collapse" href="#dropdown-search"><span class="hidden-xs">Search </span>Products <i class="fa fa-sort-desc"></i></a></li>
 					<li><a href="">support</a></li>
+					<li class="right nav-hidden">
+						<button type="button" class="btn" data-target="#dropdown-search" data-toggle="collapse"><i class="fa fa-search"></i></button>
+					</li>
 				</ul>
-
-				<div class="search-bar">
-					<form>
-						<div class="search">
-							<input type="text" placeholder="search models...">
-							<button><i class="fa fa-search"></i></button>
-						</div>
-					</form>
-				</div>
 			</div>
 		</nav>
 	</header>
 
 	<main>
-		<section class="section topic-head">
-			<div class="container">
-				<div class="product">
-					<img src="assets/img/electronics-tv.png">
+		<section id="dropdown-search" class="dropdown collapse">
+			<div class="section section-darkest">
+				<div class="container">
+					<p class="subtitle">Search for Products:</p>
+					<div class="row">
+						<div class="col-sm-12 col-md-9">
+							<form>
+								<div class="search">
+									<input type="text" placeholder="brand, model, or appliance type...">
+									<button type="button"><i class="fa fa-search"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="categories row">
+						<div class="category col-xs-6 col-sm-6 col-md-3">
+							<p class="subtitle">TV & Video</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Televisions</a></li>
+								<li><a href="results.html">Projectors</a></li>
+								<li><a href="results.html">Video Game Consoles</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-sm-6 col-md-3">
+							<p class="subtitle">Computers</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Monitors</a></li>
+								<li><a href="results.html">Tablets</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-sm-6 col-md-3">
+							<p class="subtitle">Kitchen</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Refrigerators</a></li>
+								<li><a href="results.html">Freezers</a></li>
+								<li><a href="results.html">Dishwashers</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-sm-6 col-md-3">
+							<p class="subtitle">Home</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Washers</a></li>
+								<li><a href="results.html">Dryers</a></li>
+								<li><a href="results.html">Air Conditions</a></li>
+								<li><a href="results.html">Light Bulbs</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				
-				<h2>Save on your bill with energy efficient televisions.</h2>
-				<p>Shop energy-smart to cut your energy cost, find the lowest price and help the planet.<br>
-				Click on the <a href="">Search & Filter</a> button to find the model that is right for you.</p>
+			</div>
+		</section>
+
+		<section class="section topic-head topic-head-results">
+			<div class="container">		
+				<div class="section-title">		
+					<div class="info">
+						<h2>Save on your bill with energy efficient televisions.</h2>
+						<p>Shop energy-smart to cut your energy cost, find the lowest price and help the planet.<br>
+						Click on the <a href="">Search & Filter</a> button to find the model that is right for you.</p>
+					</div>
+
+					<div class="product">
+						<img src="assets/img/electronics-tv.jpg">
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<div class="search-filter">
 			<div class="container">
 				<h2>569 of <strong>569</strong> televisions</h2>
-				<button class="btn btn-accent" data-target="#dropdown" data-toggle="collapse">Search & Filter</button>
+				<button type="button" class="btn btn-accent" data-target="#dropdown-filter" data-toggle="collapse">Search & Filter</button>
 			</div>
 		</div>
 
-		<section id="dropdown" class="right collapse">
+		<section id="dropdown-filter" class="dropdown right collapse">
 			<div class="section section-darkest">
 				<div class="container">
 					<p>Search filter options here</p>
@@ -78,23 +135,41 @@
 
 		<section class="section">
 			<div class="container">
-				<div class="results">
-					<table>
-						<thead>
-							<tr>
-								<td>Popularity</td>
-								<td>Energy Score <i class="fa fa-info-circle"></i></td>
-								<td class="hidden-xs hidden-sm hidden-md">Screen Size</td>
-								<td class="hidden-xs hidden-sm">Purchase Price</td>
-								<td class="hidden-xs hidden-sm hidden-md">Energy Savings <i class="fa fa-info-circle"></i></td>
-								<td>Details</td>
-							</tr>
-						</thead>
+				<div class="results results-list">
+					<div id="results">
+						<table>
+							<thead>
+								<tr>
+									<td class="product">Popularity</td>
+									<td class="e-score">
+										Energy Score
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-score-info" class="hover-info-box">
+												<h2>Energy Score out of 100</h2>
+												<p>A universal way of comparing a product's energy use against all similar-sized models.</p>
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">Screen Size</td>
+									<td class="purchase-price hidden-xs hidden-sm">Purchase Price</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md">
+										Energy Savings 
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-savings-info" class="hover-info-box">
+												<h2>Energy Savings Over 12 Years</h2>
+												<p>The estimated lifetime electrical energy savings for this product, compared to energy cost for a basic model of this size.</p>
+											</div>
+										</div>
+									</td>
+									<td class="button">Details</td>
+								</tr>
+							</thead>
 
-						<tbody>
-							<tr>
-								<td>
-									<div class="product">
+							<tbody>
+								<tr>
+									<td class="product">
 										<div class="left">
 											<img src="http://s3.enervee.com/img/2014/07/29/129547153_3Jp3uYVA_enervee_small_105x66.jpg">
 										</div>
@@ -112,48 +187,41 @@
 												</div>	
 											</div>
 										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm hidden-md">
-									<div class="pos-ret">
-										<div class="score hasSVG">
-											<svg version="1.1" width="70px" height="70px" viewBox="0 0 60 60">
-												<g>
-													<circle cx="30" cy="30" r="30" class="indicator"></circle>
-													<circle cx="30" cy="30" r="24"></circle>
+									</td>
+									<td class="e-score">
+										<div class="pos-ret">
+											<div class="score hasSVG">
+												<svg version="1.1" viewBox="0 0 60 60">
+													<g>
+														<circle cx="30" cy="30" r="30" class="indicator"></circle>
+														<circle cx="30" cy="30" r="24"></circle>
 
-													<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
-												</g>
-											</svg>
-										</div>
+														<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
+													</g>
+												</svg>
+											</div>
 
-										<div class="valign-bottom">
-											<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											<div class="valign-bottom">
+												<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											</div>
 										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm">
-									<div class="data-info">
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
 										55"
 										<small>Diagonal</small>
-									</div>
-								</td>
-								<td>
-									<div class="purchase-price">
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
 										$900
 									</td>
-								<td class="hidden-xs hidden-sm hidden-md esavings">
-									<div class="esavings">
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
 										<small>Up to</small>
 										$90
-									</div>
-								</td>
-								<td><a href="" class="btn btn-small">details</a></td>
-							</tr>
+									</td>
+									<td class="button"><a href="" class="btn btn-small">details</a></td>
+								</tr>
 
-							<tr>
-								<td>
-									<div class="product">
+								<tr>
+									<td class="product">
 										<div class="left">
 											<img src="http://s3.enervee.com/img/2014/07/29/129547153_3Jp3uYVA_enervee_small_105x66.jpg">
 										</div>
@@ -164,56 +232,48 @@
 												<div class="empty">
 													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 												</div>
-												<div class="full" style="width:76%">
+												<div class="full" style="width:95%">
 													<span>
 														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 													</span>
 												</div>	
 											</div>
 										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm hidden-md">
-									<div class="pos-ret">
-										<div class="score hasSVG">
-											<svg version="1.1" width="70px" height="70px" viewBox="0 0 60 60">
-												<g>
-													<circle cx="30" cy="30" r="30" class="outer"></circle>
-													<path d="M30,30L30,0A30,30 327.6 1,1 13.925196150630086,4.670162234939558z" class="indicator"></path>
-													<circle cx="30" cy="30" r="24"></circle>
-
-													<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">91</text>
-												</g>
-											</svg>
-										</div>
-
-										<div class="valign-bottom">
-											<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
-										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm">
-									<div class="data-info">
-										50"
-										<small>Diagonal</small>
-									</div>
-								</td>
-								<td>
-									<div class="purchase-price">
-										$800
 									</td>
-								<td class="hidden-xs hidden-sm hidden-md esavings">
-									<div class="esavings">
-										<small>Up to</small>
-										$70
-									</div>
-								</td>
-								<td><a href="" class="btn btn-small">details</a></td>
-							</tr>
+									<td class="e-score">
+										<div class="pos-ret">
+											<div class="score hasSVG">
+												<svg version="1.1" viewBox="0 0 60 60">
+													<g>
+														<circle cx="30" cy="30" r="30" class="indicator"></circle>
+														<circle cx="30" cy="30" r="24"></circle>
 
-							<tr>
-								<td>
-									<div class="product">
+														<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
+													</g>
+												</svg>
+											</div>
+
+											<div class="valign-bottom">
+												<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										55"
+										<small>Diagonal</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$900
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$90
+									</td>
+									<td class="button"><a href="" class="btn btn-small">details</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
 										<div class="left">
 											<img src="http://s3.enervee.com/img/2014/07/29/129547153_3Jp3uYVA_enervee_small_105x66.jpg">
 										</div>
@@ -224,56 +284,48 @@
 												<div class="empty">
 													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 												</div>
-												<div class="full" style="width:80%">
+												<div class="full" style="width:95%">
 													<span>
 														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 													</span>
 												</div>	
 											</div>
 										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm hidden-md">
-									<div class="pos-ret">
-										<div class="score hasSVG">
-											<svg version="1.1" width="70px" height="70px" viewBox="0 0 60 60">
-												<g>
-													<circle cx="30" cy="30" r="30" class="outer"></circle>
-													<path d="M30,30L30,0A30,30 342 1,1 20.72949016875157,1.468304511145394z" class="indicator"></path>
-													<circle cx="30" cy="30" r="24"></circle>
-
-													<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">95</text>
-												</g>
-											</svg>
-										</div>
-
-										<div class="valign-bottom">
-											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
-										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm">
-									<div class="data-info">
-										46"
-										<small>Diagonal</small>
-									</div>
-								</td>
-								<td>
-									<div class="purchase-price">
-										$549
 									</td>
-								<td class="hidden-xs hidden-sm hidden-md esavings">
-									<div class="esavings">
-										<small>Up to</small>
-										$68
-									</div>
-								</td>
-								<td><a href="" class="btn btn-small">details</a></td>
-							</tr>
+									<td class="e-score">
+										<div class="pos-ret">
+											<div class="score hasSVG">
+												<svg version="1.1" viewBox="0 0 60 60">
+													<g>
+														<circle cx="30" cy="30" r="30" class="indicator"></circle>
+														<circle cx="30" cy="30" r="24"></circle>
 
-							<tr>
-								<td>
-									<div class="product">
+														<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
+													</g>
+												</svg>
+											</div>
+
+											<div class="valign-bottom">
+												<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										55"
+										<small>Diagonal</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$900
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$90
+									</td>
+									<td class="button"><a href="" class="btn btn-small">details</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
 										<div class="left">
 											<img src="http://s3.enervee.com/img/2014/07/29/129547153_3Jp3uYVA_enervee_small_105x66.jpg">
 										</div>
@@ -284,58 +336,104 @@
 												<div class="empty">
 													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 												</div>
-												<div class="full" style="width:50%">
+												<div class="full" style="width:95%">
 													<span>
 														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 													</span>
 												</div>	
 											</div>
 										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm hidden-md">
-									<div class="pos-ret">
-										<div class="score hasSVG">
-											<svg version="1.1" width="70px" height="70px" viewBox="0 0 60 60">
-												<g>
-													<circle cx="30" cy="30" r="30" class="outer"></circle>
-													<path d="M30,30L30,0A30,30 349.2 1,1 24.37856056242826,0.5313824781393384z" class="indicator"></path>
-													<circle cx="30" cy="30" r="24"></circle>
-
-													<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">97</text>
-												</g>
-											</svg>
-										</div>
-
-										<div class="valign-bottom">
-											<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
-										</div>
-									</div>
-								</td>
-								<td class="hidden-xs hidden-sm">
-									<div class="data-info">
-										65"
-										<small>Diagonal</small>
-									</div>
-								</td>
-								<td>
-									<div class="purchase-price">
-										$2,000
 									</td>
-								<td class="hidden-xs hidden-sm hidden-md esavings">
-									<div class="esavings">
+									<td class="e-score">
+										<div class="pos-ret">
+											<div class="score hasSVG">
+												<svg version="1.1" viewBox="0 0 60 60">
+													<g>
+														<circle cx="30" cy="30" r="30" class="indicator"></circle>
+														<circle cx="30" cy="30" r="24"></circle>
+
+														<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
+													</g>
+												</svg>
+											</div>
+
+											<div class="valign-bottom">
+												<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										55"
+										<small>Diagonal</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$900
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
 										<small>Up to</small>
-										$109
-									</div>
-								</td>
-								<td><a href="" class="btn btn-small">details</a></td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="more-results">
-						<button class="btn btn-accent btn-full">
-							Load More Results
-						</button>
+										$90
+									</td>
+									<td class="button"><a href="" class="btn btn-small">details</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2014/07/29/129547153_3Jp3uYVA_enervee_small_105x66.jpg">
+										</div>
+										<div class="right">
+											<span class="name">Sony</span>
+											<small>KDL50W700B</small>
+											<div class="rating">
+												<div class="empty">
+													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+												</div>
+												<div class="full" style="width:95%">
+													<span>
+														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+													</span>
+												</div>	
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<div class="pos-ret">
+											<div class="score hasSVG">
+												<svg version="1.1" viewBox="0 0 60 60">
+													<g>
+														<circle cx="30" cy="30" r="30" class="indicator"></circle>
+														<circle cx="30" cy="30" r="24"></circle>
+
+														<text x="30" y="38" font-size="16pt" font-weight="800" text-anchor="middle">100</text>
+													</g>
+												</svg>
+											</div>
+
+											<div class="valign-bottom">
+												<img src="http://enervee-static-live.s3.amazonaws.com/media/certs/estar-me15.png" height="24">
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										55"
+										<small>Diagonal</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$900
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$90
+									</td>
+									<td class="button"><a href="" class="btn btn-small">details</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="more-results">
+							<button type="button" class="btn btn-accent btn-full">
+								Load More Results
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -347,7 +445,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-skinny col-xs-6 col-sm-6 col-md-2">
-					<p class="section-title">Discover</p>
+					<p class="title">Discover</p>
 					<ul class="nav nav-topic">
 						<li><a href="">About Us</a></li>
 						<li><a href="">Blog</a></li>
@@ -362,7 +460,7 @@
 				</div>
 
 				<div class="col-skinny col-xs-6 col-sm-6 col-md-2">
-					<p class="section-title">Join Us</p>
+					<p class="title">Join Us</p>
 					<ul class="nav nav-topic">
 						<li><a href="">Enervee U</a></li>
 						<li><a href="">Newsletter</a></li>
@@ -377,7 +475,7 @@
 				</div>
 
 				<div class="col-wider hidden-xs hidden-sm col-md-4">
-					<p class="section-title">Latest Tweets</p>
+					<p class="title">Latest Tweets</p>
 					<article>
 						<p>EnerveeScore: Can renewable energy ignite consumers’ hopes?
 						<br><a href="http://t.co/fe8oWxBaOd">http://t.co/fe8oWxBaOd</a></p>
@@ -390,7 +488,7 @@
 				</div>
 
 				<div class="col-wider hidden-xs hidden-sm col-md-4">
-					<p class="section-title">Latest Blog Posts</p>
+					<p class="title">Latest Blog Posts</p>
 					<article>
 						<p><a href="">President Obama meets Enervee</a>
 						<br>We have many interesting days at Enervee, but last Thursday was certainly one of the more exciting ones: President Obama was visiting Cro... <a href="">Read more</a></p>

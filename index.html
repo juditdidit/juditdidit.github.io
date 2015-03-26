@@ -177,18 +177,16 @@
 
 		<section class="section">
 			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="video-reel">
+					<div class="video-info">
 						<h2>Video Description Title</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, sodales at velit non, consectetur eleifend nibh. Nunc quam metus, convallis vel felis sit amet, ullamcorper venenatis ante. Phasellus dictum et lorem et faucibus. Morbi convallis tortor et ligula rutrum maximus.
 						</p>
 					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-6">
-						<div class="video-preview">
-							<img src="assets/img/video-preview.jpg" alt="Enervee view preview">
-							<a href="" class="play"><i class="fa fa-play-circle"></i></a>
+					<div class="video-self">
+						<div class="video-container">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/2DnlAj2aPIs" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -228,7 +226,7 @@
 					<p class="title">Join Us</p>
 					<ul class="nav nav-topic">
 						<li><a href="/energy-efficiency-education-center/" target="_blank">Enervee U</a></li>
-						<li><a href="#popup-newsletter" target="_blank">Newsletter</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modal-newsletter">Newsletter</a></li>
 						<li><a href="https://twitter.com/enerveescore" target="_blank">Twitter</a></li>
 						<li><a href="http://www.facebook.com/enervee" target="_blank">Facebook</a></li>
 						<li><a href="http://www.linkedin.com/company/enervee" target="_blank">LinkedIn</a></li>
@@ -278,5 +276,42 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- newsletter popup -->
+	<div class="modal fade" id="modal-newsletter" tabindex="-1" role="dialog" aria-labelledby="modal-newsletter" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	            	<button type="button" class="close-button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+	            	<h4 class="modal-title" id="myModalLabel">Subscribe to our Newsletter</h4>
+	            </div>
+	            <div class="modal-body">
+	                <form class="form">
+	                	<label>
+	                		<span class="label">Email Address</span>
+	                		<input type="email" name="newsletter-form-email">
+	                	</label>
+
+	                	<div class="set">
+		                	<label>
+		                		<span class="label">First Name <small>(optional)</small></span>
+		                		<input type="text" name="newsletter-form-first-name">
+		                	</label>
+		                	<label>
+		                		<span class="label">Last Name <small>(optional)</small></span>
+		                		<input type="text" name="newsletter-form-last-name">
+		                	</label>
+		                </div>
+	                </form>
+
+	                <a href="http://us1.campaign-archive1.com/home/?u=84867978481dc8892f3c6e88d&id=1c4f11336d">View previous campaigns</a>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-small" data-dismiss="modal">Cancel</button>
+	                <button type="button" class="btn btn-small btn-accent">Subscribe</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </body>
 </html>
