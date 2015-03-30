@@ -15,7 +15,7 @@ $(function() {
 	});
 
 	// results page card flip
-	$('.results-cards .card button').click(function(e) {
+	$('.stack .card button').click(function(e) {
 		e.preventDefault();
 
 		var toggleButton = $(this);
