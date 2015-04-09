@@ -14,12 +14,12 @@ $(function() {
 		}
 	});
 
-	// results page card flip
-	$('.stack .card button').click(function(e) {
+	// card flip
+	$('.stack .card .flip-trigger button').click(function(e) {
 		e.preventDefault();
 
 		var toggleButton = $(this);
-		var toggleCard = toggleButton.closest('.card'); 
+		var toggleCard = toggleButton.closest('.flip-container'); 
 
 		toggleCard.toggleClass('flip');
 	});
