@@ -519,7 +519,7 @@ hr.short {
 }
 #header.has-hero #hero {
   background-color: #ffa100;
-  background-image: none;
+  background-image: url('img/hero.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -551,7 +551,7 @@ hr.short {
   margin-top: -78px;
 }
 #header.has-hero.has-hero-mini #hero {
-  padding: 70px 0;
+  padding: 100px 0;
 }
 #header.has-hero.has-hero-mini #dropdown-search {
   position: absolute;
@@ -1550,7 +1550,7 @@ footer #copyright .break {
     padding: 23px 30px 23px;
   }
   #header.has-hero.has-hero-mini #hero {
-    padding: 100px 0;
+    padding: 140px 0;
   }
   #header.has-hero.has-hero-mini #dropdown-search {
     top: 70px;
