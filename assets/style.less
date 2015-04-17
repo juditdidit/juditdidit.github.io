@@ -675,6 +675,26 @@ hr {
 					}
 				}
 			}
+
+			.scroll-initiator {
+				position: absolute;
+				left: 50%;
+				margin-left: -30px;
+				bottom: (@spacing-small - 30px);
+				display: block;
+				width: 60px;
+				padding: 6px 0;
+				font-size: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: @accent-main;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: darken(@accent-main, 4%);
+				}
+			}
 		}
 
 		&.has-hero-tall {

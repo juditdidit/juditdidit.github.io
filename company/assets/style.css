@@ -535,6 +535,24 @@ hr.short {
 #header.has-hero #hero #slogan h1 .accent {
   color: #064771;
 }
+#header.has-hero #hero .scroll-initiator {
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+  display: block;
+  width: 60px;
+  padding: 6px 0;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #118648;
+}
+#header.has-hero #hero .scroll-initiator:hover,
+#header.has-hero #hero .scroll-initiator:focus,
+#header.has-hero #hero .scroll-initiator:active {
+  color: #0f743e;
+}
 #header.has-hero.has-hero-tall {
   height: 100%;
   padding-bottom: 227px;

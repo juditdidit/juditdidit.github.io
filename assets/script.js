@@ -5,13 +5,22 @@ $(function() {
 		$('body').removeClass('preload');
 	}, 400); 
 
-	//scroll "dropdown" box into view on index page
+	// scroll "dropdown" box into view on index page
 	$('#dropdown-toggle').click(function() {
 		if ($('#dropdown-toggle').attr('aria-expanded') === 'false') {
 			$('html, body').animate({
 				scrollTop: $('#start').offset().top
 			}, 500);
 		}
+	});
+
+	// utils page scroll down from hero
+	$('#scroll-down').click(function(e) {
+		e.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $('#scroll-to').offset().top
+		}, 500);
 	});
 
 	// card flip
