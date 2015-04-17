@@ -824,7 +824,7 @@ hr.short {
   white-space: nowrap;
 }
 .product-category-list ul .incentives .content {
-  padding-top: 26px;
+  padding: 26px 12px 0;
   background-color: #f5f4f5;
   border-radius: 4px;
   height: 172px;
@@ -1830,6 +1830,9 @@ footer #copyright .break {
   #dropdown-search .section:before {
     right: 15px;
   }
+  .product-category-list ul .incentives p {
+    font-size: 12px;
+  }
   footer .companies img {
     float: none;
     margin-right: 0;
@@ -1888,7 +1891,6 @@ footer #copyright .break {
   }
   .results table .button .btn.btn-small {
     font-size: 10px;
-    font-weight: 500;
     padding: 5px 10px;
   }
   .results .more-results {
