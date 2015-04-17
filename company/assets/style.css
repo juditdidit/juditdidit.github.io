@@ -819,6 +819,9 @@ hr.short {
 }
 .product-category-list ul li a {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .product-category-list ul .incentives .content {
   padding-top: 26px;
@@ -828,7 +831,7 @@ hr.short {
 }
 .product-category-list ul .incentives .fa {
   font-size: 60px;
-  color: #118648;
+  color: #f58220;
   margin-bottom: 12px;
 }
 .product-category-list ul .incentives p {
@@ -1479,6 +1482,7 @@ footer .companies {
 footer .companies img {
   float: left;
   width: 150px;
+  display: block;
   margin-right: 24px;
 }
 footer .companies p {
@@ -1825,6 +1829,14 @@ footer #copyright .break {
   }
   #dropdown-search .section:before {
     right: 15px;
+  }
+  footer .companies img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  footer .companies p {
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 500px) {

@@ -1,6 +1,7 @@
 /* accents */
 @accent-main: 		#8957d8;
 @accent-sub: 		#0075d1;
+@accent-alt: 		@accent-sub;
 @block-accent: 		@accent-main; //btn accent,thead,etc.
 @block-accent-text: lighten(@accent-main,30%);
 @slogan-bg: 		@accent-main;
@@ -1032,10 +1033,13 @@ hr {
 
 			a {
 				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 		}
 
-		.incentives {				
+		.incentives {
 			.content {
 				padding-top: 26px;
 				background-color: @bg-darker;
@@ -1045,7 +1049,7 @@ hr {
 
 			.fa {
 				font-size: 60px;
-				color: @accent-main;
+				color: @accent-alt;
 				margin-bottom: 12px;				
 			}
 
@@ -1839,6 +1843,7 @@ footer {
 		img {
 			float: left;
 			width: 150px;
+			display: block;
 			margin-right: 24px;
 		}
 
@@ -2370,6 +2375,20 @@ footer {
 	#dropdown-search {
 		.section:before {
 			right: 15px;
+		}
+	}
+
+	footer {
+		.companies {
+			img {
+				float: none;
+				margin-right: 0;
+				margin-bottom: 18px;
+			}
+
+			p {
+				padding-left: 0;
+			}
 		}
 	}
 }
