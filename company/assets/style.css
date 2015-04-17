@@ -524,7 +524,7 @@ hr.short {
   background-color: #118648;
   background-image: url('img/kitchen-green-2.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   position: relative;
 }
@@ -834,7 +834,7 @@ hr.short {
 }
 .product-category-list ul .incentives .fa {
   font-size: 60px;
-  color: #118648;
+  color: #f58220;
   margin-bottom: 12px;
 }
 .product-category-list ul .incentives p {
