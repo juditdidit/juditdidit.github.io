@@ -1830,6 +1830,9 @@ footer #copyright .break {
   #dropdown-search .section:before {
     right: 15px;
   }
+  .product-category-list ul .incentives .fa {
+    font-size: 40px;
+  }
   .product-category-list ul .incentives p {
     font-size: 12px;
   }
