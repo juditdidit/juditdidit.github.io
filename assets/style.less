@@ -595,7 +595,7 @@ hr {
 		z-index: 2;
 
 		.container-fluid {
-			padding: 0 15px;
+			padding: 0;
 		}
 
 		.logo {
@@ -1899,6 +1899,7 @@ footer {
 	}
 }
 
+// tablet
 @media screen and (min-width: 768px) {
 	.btn {
 		font-size: 16px;
@@ -1913,6 +1914,10 @@ footer {
 
 			.logo {
 				height: @nav-size;
+			}
+
+			.container-fluid {
+				padding: 0 15px;
 			}
 
 			.nav {
@@ -2051,6 +2056,7 @@ footer {
 	}
 }
 
+// laptop
 @media screen and (min-width: 992px) {
 	.featured {
 		margin: 0 auto;
@@ -2137,6 +2143,7 @@ footer {
 	}
 }
 
+// desktop
 @media screen and (min-width: 1200px) {
 	h2 {
 		font-size: 32px;
@@ -2220,6 +2227,7 @@ footer {
 	}
 }
 
+// short window
 @media screen and (max-height: 650px), screen and (max-width: 992px) {
 	#header {
 		&.has-hero {
@@ -2254,6 +2262,7 @@ footer {
 	}
 }
 
+// phone
 @media screen and (max-width: 650px) {
 	.search-filter {
 		.btn {
@@ -2275,6 +2284,7 @@ footer {
 	}
 }
 
+// small phone
 @media screen and (max-width: 550px) {
 	#header {
 		#topnav {
@@ -2364,6 +2374,7 @@ footer {
 	}
 }
 
+// small phone
 @media screen and (max-width: 500px) {
 	.steps {
 		.step {

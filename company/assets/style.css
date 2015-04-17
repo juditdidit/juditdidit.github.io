@@ -461,15 +461,9 @@ hr.short {
   position: absolute;
   width: 100%;
   z-index: 2;
-  background-image: -ms-linear-gradient(top, rgba(89, 89, 89, 0.4) 0%, rgba(89, 89, 89, 0) 100%);
-  background-image: -moz-linear-gradient(top, rgba(89, 89, 89, 0.4) 0%, rgba(89, 89, 89, 0) 100%);
-  background-image: -o-linear-gradient(top, rgba(89, 89, 89, 0.4) 0%, rgba(89, 89, 89, 0) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 0.4)), color-stop(1, rgba(89, 89, 89, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(89, 89, 89, 0.4) 0%, #595959 100%);
-  background-image: linear-gradient(to bottom, rgba(89, 89, 89, 0.4) 0%, rgba(89, 89, 89, 0) 100%);
 }
 #header #topnav .container-fluid {
-  padding: 0 15px;
+  padding: 0;
 }
 #header #topnav .logo {
   display: block;
@@ -504,7 +498,7 @@ hr.short {
 #header #topnav .nav li a:hover,
 #header #topnav .nav li a:active,
 #header #topnav .nav li a:focus {
-  color: #f58220;
+  color: #118648;
 }
 #header #topnav .nav li.nav-hidden {
   display: none;
@@ -567,7 +561,7 @@ hr.short {
 #header.has-hero #topnav .nav li a:hover,
 #header.has-hero #topnav .nav li a:active,
 #header.has-hero #topnav .nav li a:focus {
-  color: #f58220;
+  color: #118648;
 }
 #header.has-hero h2 {
   text-align: center;
@@ -834,7 +828,7 @@ hr.short {
 }
 .product-category-list ul .incentives .fa {
   font-size: 60px;
-  color: #f58220;
+  color: #118648;
   margin-bottom: 12px;
 }
 .product-category-list ul .incentives p {
@@ -1550,6 +1544,9 @@ footer #copyright .break {
   #header #topnav .logo {
     height: 70px;
   }
+  #header #topnav .container-fluid {
+    padding: 0 15px;
+  }
   #header #topnav .nav li a {
     padding: 23px 15px 23px;
   }
@@ -1821,7 +1818,7 @@ footer #copyright .break {
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:hover,
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:active,
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:focus {
-    color: #f58220;
+    color: #118648;
   }
   #header #hero {
     padding: 75px 0 50px;
