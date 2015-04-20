@@ -3,7 +3,7 @@
 @accent-sub: 		#0075d1;
 @accent-alt: 		@accent-sub;
 @block-accent: 		@accent-main; //btn accent,thead,etc.
-@block-accent-text: lighten(desaturate(@accent-main,30%),50%);
+@block-accent-text: lighten(@accent-main,30%);
 @slogan-bg: 		@accent-main;
 @slogan-text:		#ffffff;
 
@@ -12,7 +12,6 @@
 @bg-darker: 		#f5f4f5;
 @bg-darkest: 		#595959; //footer,dropdown
 @block-normal:		#ebe9eb; //btn default,etc.
-@table-hover: 		lighten(@accent-sub,70%);
 
 /* general text */
 @text-color: 		#7c7c7c;
@@ -21,7 +20,6 @@
 @text-nav: 			@text-light;
 @text-footer:		#979498;
 @text-header-light: #cccccc;
-@topnav-text-hover:	#f58220;
 
 
 /* sizing */
@@ -29,9 +27,6 @@
 @nav-size-small: 	50px;
 @spacing-large: 	70px;
 @spacing-small: 	50px;
-
-@topnav-gradient-small: url('img/topnav-gradient-50.png');
-@topnav-gradient-large: url('img/topnav-gradient-70.png');
 
 /* other */
 @font-family: 		'Roboto', sans-serif;
@@ -101,7 +96,7 @@ h2 {
 			margin-bottom: 12px;
 			font-weight: 400;
 			text-transform: uppercase;
-			letter-spacing: 1px;
+			letter-spacing: 2;
 			color: @accent-main;
 		}
 	}
@@ -121,7 +116,7 @@ p {
 	&.subtitle {
 		font-weight: 400;
 		text-transform: uppercase;
-		letter-spacing: 1px;
+		letter-spacing: 2;
 	}
 
 	&.lead {
@@ -213,14 +208,14 @@ hr {
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: darken(@block-normal, 6%);
+		background-color: darken(@block-normal, 4%);
 		color: darken(@text-color,10%);
 	}
 
 	&&-small {
 		font-size: 12px;
 		font-weight: 500;
-		letter-spacing: 0px;
+		letter-spacing: 0;
 		line-height: 20px;
 		padding: 10px 20px;
 		margin: 0;
@@ -236,7 +231,7 @@ hr {
 		&:hover,
 		&:active,
 		&:focus {
-			background-color: darken(@block-accent, 6%);
+			background-color: darken(@block-accent, 4%);
 		}
 	}
 
@@ -657,12 +652,6 @@ hr {
 		-moz-box-shadow: none;
 		box-shadow: none;
 
-		#topnav {
-			background-image: @topnav-gradient-small;
-			background-repeat: repeat-x;
-			background-position: top left;
-		}
-
 		#hero {
 			background-color: @slogan-bg;
 			background-image: @hero-img;
@@ -882,7 +871,7 @@ hr {
 		position: absolute;
 		top: -20px;
 		left: auto;
-		right: 129px;
+		right: 175px;
 		border-width: 10px;
 		border-style: solid;
 		border-color: transparent transparent @bg-darkest transparent;
@@ -1125,7 +1114,7 @@ hr {
 
 		thead {
 			background-color: @accent-main;
-			color: lighten(desaturate(@accent-main,30%),50%);
+			color: @block-accent-text;
 			text-transform: uppercase;
 			font-size: 13px;
 			font-weight: 400;
@@ -1142,7 +1131,7 @@ hr {
 			}
 
 			.fa {
-				color: lighten(desaturate(@accent-main,30%),50%);
+				color: lighten(@accent-main,20%);
 			}
 		}
 
@@ -1160,7 +1149,7 @@ hr {
 				transition: background-color 0.4s;
 
 				&:hover {
-					background-color: @table-hover;
+					background-color: lighten(@accent-sub,56%);
 
 					.btn {
 						color: @text-light;
@@ -1179,7 +1168,7 @@ hr {
 					border-color: darken(@bg-light,6%);
 
 					&:hover {
-						background-color: @table-hover;
+						background-color: lighten(@accent-sub,55%);
 
 						.btn {
 							color: @text-light;
@@ -1620,6 +1609,10 @@ hr {
 				&.active {
 					a {
 						font-weight: 500;
+
+						&:before {
+							//content: '> ';
+						}
 					}
 				}
 			}
@@ -1965,10 +1958,6 @@ footer {
 		}
 
 		&.has-hero {
-			#topnav {
-				background-image: @topnav-gradient-large;
-			}
-
 			&.has-hero-mini {
 				#hero {
 					padding: (@spacing-large * 2) 0;
@@ -2032,7 +2021,7 @@ footer {
 
 	#dropdown-search {
 		.section:before {
-			right: 172px;
+			right: 201px;
 		}
 	}
 

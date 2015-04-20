@@ -64,7 +64,7 @@ h2.heading-smaller {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2;
-  color: #8957d8;
+  color: #0075d1;
 }
 blockquote {
   margin-bottom: 18px;
@@ -86,7 +86,7 @@ p.lead {
 }
 a {
   text-decoration: none;
-  color: #0075d1;
+  color: #8957d8;
   font-weight: 500;
   -webkit-transition: color 0.4s;
   -moz-transition: color 0.4s;
@@ -169,8 +169,8 @@ hr.short {
   margin: 0;
 }
 .btn.btn-accent {
-  background-color: #8957d8;
-  color: #e0d3f5;
+  background-color: #0075d1;
+  color: #9ed4ff;
   -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
@@ -178,7 +178,7 @@ hr.short {
 .btn.btn-accent:hover,
 .btn.btn-accent:active,
 .btn.btn-accent:focus {
-  background-color: #7d46d4;
+  background-color: #006abd;
 }
 .btn.btn-full {
   display: block;
@@ -423,7 +423,7 @@ hr.short {
   width: 200px;
 }
 .page-nav {
-  background-color: #8957d8;
+  background-color: #0075d1;
   min-height: 50px;
 }
 .page-nav ul {
@@ -445,7 +445,7 @@ hr.short {
 .page-nav ul li a:hover,
 .page-nav ul li a:active,
 .page-nav ul li a:focus {
-  background-color: #7d46d4;
+  background-color: #006abd;
 }
 #header {
   background-color: #ffffff;
@@ -468,7 +468,7 @@ hr.short {
 #header #topnav .logo {
   display: block;
   height: 50px;
-  padding: 10px 30px;
+  padding: 10px 15px;
   float: left;
 }
 #header #topnav .logo img {
@@ -488,17 +488,17 @@ hr.short {
   display: inline-block;
 }
 #header #topnav .nav li a {
-  padding: 13px 30px 13px;
+  padding: 13px 15px 13px;
   color: #7c7c7c;
-  -webkit-transition: background-color 0.4s;
-  -moz-transition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  transition: background-color 0.4s;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
 }
 #header #topnav .nav li a:hover,
 #header #topnav .nav li a:active,
 #header #topnav .nav li a:focus {
-  background-color: rgba(137, 87, 216, 0.15);
+  color: #0075d1;
 }
 #header #topnav .nav li.nav-hidden {
   display: none;
@@ -508,9 +508,6 @@ hr.short {
   top: -3px;
   margin-left: 4px;
 }
-#header #topnav .nav li + li {
-  border-left: 1px solid rgba(124, 124, 124, 0.1);
-}
 #header.has-hero {
   height: auto;
   -webkit-box-shadow: none;
@@ -518,15 +515,15 @@ hr.short {
   box-shadow: none;
 }
 #header.has-hero #hero {
-  background-color: #8957d8;
-  background-image: url('img/hero.jpg');
+  background-color: #0075d1;
+  background-image: url('img/lanight-neon.jpg');
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center top;
   background-size: cover;
   position: relative;
 }
 #header.has-hero #hero #slogan {
-  background-color: rgba(137, 87, 216, 0.65);
+  background-color: rgba(0, 117, 209, 0.65);
   text-align: center;
   padding: 35px 0;
   width: 100%;
@@ -536,7 +533,25 @@ hr.short {
   color: #ffffff;
 }
 #header.has-hero #hero #slogan h1 .accent {
+  color: #8957d8;
+}
+#header.has-hero #hero .scroll-initiator {
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+  display: block;
+  width: 60px;
+  padding: 6px 0;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
   color: #0075d1;
+}
+#header.has-hero #hero .scroll-initiator:hover,
+#header.has-hero #hero .scroll-initiator:focus,
+#header.has-hero #hero .scroll-initiator:active {
+  color: #006abd;
 }
 #header.has-hero.has-hero-tall {
   height: 100%;
@@ -551,7 +566,7 @@ hr.short {
   margin-top: -78px;
 }
 #header.has-hero.has-hero-mini #hero {
-  padding: 70px 0;
+  padding: 100px 0;
 }
 #header.has-hero.has-hero-mini #dropdown-search {
   position: absolute;
@@ -564,10 +579,7 @@ hr.short {
 #header.has-hero #topnav .nav li a:hover,
 #header.has-hero #topnav .nav li a:active,
 #header.has-hero #topnav .nav li a:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-#header.has-hero #topnav .nav li + li {
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  color: #0075d1;
 }
 #header.has-hero h2 {
   text-align: center;
@@ -604,7 +616,7 @@ hr.short {
   content: '';
   display: block;
   position: absolute;
-  top: -(50px + 20px);
+  top: -70px;
   right: 110px;
   border-width: 10px;
   border-style: solid;
@@ -695,10 +707,10 @@ hr.short {
   margin-top: 8px;
   margin-right: 30px;
   display: block;
-  border: 3px solid #0075d1;
+  border: 3px solid #8957d8;
   border-radius: 100%;
   text-align: center;
-  color: #0075d1;
+  color: #8957d8;
   line-height: 76px;
   font-size: 32px;
   font-weight: 300;
@@ -708,16 +720,16 @@ hr.short {
   margin-bottom: 12px;
 }
 .steps .step.accent-main .circle {
-  border-color: #8957d8;
-  color: #8957d8;
+  border-color: #0075d1;
+  color: #0075d1;
 }
 .steps .step.accent-main h3,
 .steps .step.accent-main p.subtitle {
-  color: #8957d8;
+  color: #0075d1;
 }
 .steps .step.accent-sub h3,
 .steps .step.accent-sub p.subtitle {
-  color: #0075d1;
+  color: #8957d8;
 }
 .steps .step .info {
   padding-left: 120px;
@@ -736,6 +748,9 @@ hr.short {
 }
 .intro-list {
   text-align: center;
+}
+.intro-list .list-item + .list-item {
+  margin-top: 50px;
 }
 .intro-list p {
   margin: 0;
@@ -759,7 +774,7 @@ hr.short {
   line-height: 60px;
   height: 60px;
   font-size: 50px;
-  color: #8957d8;
+  color: #0075d1;
 }
 .intro-list .icon.popularity {
   font-size: 25px;
@@ -788,7 +803,7 @@ hr.short {
   max-width: 100px;
   height: 60px;
   padding-top: 6px;
-  background-color: #8957d8;
+  background-color: #0075d1;
   margin: 0 auto;
 }
 .intro-list .icon.total-rebates .rebate-card small,
@@ -822,20 +837,25 @@ hr.short {
 }
 .product-category-list ul li a {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .product-category-list ul .incentives .content {
-  padding-top: 26px;
+  padding: 26px 12px 0;
   background-color: #f5f4f5;
   border-radius: 4px;
-  height: 172px;
 }
 .product-category-list ul .incentives .fa {
   font-size: 60px;
-  color: #8957d8;
+  color: #0075d1;
   margin-bottom: 12px;
 }
 .product-category-list ul .incentives p {
   margin: 0;
+}
+.product-category-list ul .content {
+  height: 172px;
 }
 .featured {
   margin: -30px auto;
@@ -849,7 +869,7 @@ hr.short {
   overflow: hidden;
 }
 .results .table-header {
-  background-color: #8957d8;
+  background-color: #0075d1;
   margin-bottom: 20px;
   position: fixed;
   top: 0;
@@ -860,8 +880,8 @@ hr.short {
   width: 100%;
 }
 .results table thead {
-  background-color: #8957d8;
-  color: #e0d3f5;
+  background-color: #0075d1;
+  color: #9ed4ff;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 400;
@@ -872,10 +892,10 @@ hr.short {
   padding: 12.5px 15px;
   border-width: 0px 1px;
   border-style: solid;
-  border-color: #9568dc;
+  border-color: #0080e5;
 }
 .results table thead .fa {
-  color: #c3aaeb;
+  color: #38a7ff;
 }
 .results table tbody {
   border-width: 0px 1px 1px;
@@ -891,14 +911,14 @@ hr.short {
   transition: background-color 0.4s;
 }
 .results table tbody tr:hover {
-  background-color: #f0f8ff;
+  background-color: #ffffff;
 }
 .results table tbody tr:hover .btn {
   color: #ffffff;
-  background-color: #0075d1;
+  background-color: #8957d8;
 }
 .results table tbody tr:hover .btn:hover {
-  background-color: #0064b2;
+  background-color: #783ed2;
 }
 .results table tbody tr:nth-child(even) {
   background-color: #faf9fa;
@@ -907,11 +927,11 @@ hr.short {
   border-color: #f0f0f0;
 }
 .results table tbody tr:nth-child(even):hover {
-  background-color: #ebf6ff;
+  background-color: #ffffff;
 }
 .results table tbody tr:nth-child(even):hover .btn {
   color: #ffffff;
-  background-color: #0075d1;
+  background-color: #8957d8;
 }
 .results table tbody tr:nth-child(even) .btn {
   background-color: #e1dee1;
@@ -938,7 +958,7 @@ hr.short {
   width: 84px;
 }
 .results table tbody tr td.product .rating .full {
-  color: #8957d8;
+  color: #0075d1;
   position: absolute;
   top: 0;
   left: 0;
@@ -982,10 +1002,10 @@ hr.short {
   fill: #ffffff;
 }
 .e-score-bubble .indicator {
-  fill: #8957d8;
+  fill: #0075d1;
 }
 .e-score-bubble .score {
-  fill: #0075d1;
+  fill: #8957d8;
   font-size: 24px;
   font-weight: 800;
 }
@@ -1173,7 +1193,7 @@ hr.short {
   display: inline-block;
 }
 .stack.products .product-rating .rating .full {
-  color: #8957d8;
+  color: #0075d1;
   position: absolute;
   top: 0;
   left: 0;
@@ -1228,7 +1248,7 @@ hr.short {
   line-height: 1.4;
   font-weight: 400;
   margin-bottom: 10px;
-  color: #8957d8;
+  color: #0075d1;
 }
 .hover-info .hover-info-box p {
   font-weight: 300;
@@ -1329,7 +1349,7 @@ hr.short {
   display: inline-block;
 }
 .rating .full {
-  color: #8957d8;
+  color: #0075d1;
   position: absolute;
   top: 0;
   left: 0;
@@ -1381,7 +1401,7 @@ hr.short {
   font-weight: 500;
 }
 .well .energy-savings-calc span.number.accent {
-  color: #8957d8;
+  color: #0075d1;
 }
 .well .energy-savings-calc span.sign {
   width: 15%;
@@ -1402,7 +1422,7 @@ hr.short {
 .well .compare-items .item-this {
   font-size: 100px;
   line-height: 100px;
-  color: #8957d8;
+  color: #0075d1;
 }
 .well .compare-items .item-equals {
   line-height: 100px;
@@ -1482,6 +1502,7 @@ footer .companies {
 footer .companies img {
   float: left;
   width: 150px;
+  display: block;
   margin-right: 24px;
 }
 footer .companies p {
@@ -1507,7 +1528,7 @@ footer .bottomnav ul li {
   padding: 0 15px;
 }
 footer p.disclaimer {
-  margin: 50px 0;
+  margin: 50px 0 0;
   line-height: 1.2;
 }
 footer small {
@@ -1524,6 +1545,7 @@ footer .logo img {
   height: 100%;
 }
 footer #copyright {
+  margin: 50px 0 0;
   text-align: center;
 }
 footer #copyright a {
@@ -1546,11 +1568,14 @@ footer #copyright .break {
   #header #topnav .logo {
     height: 70px;
   }
+  #header #topnav .container-fluid {
+    padding: 0 15px;
+  }
   #header #topnav .nav li a {
-    padding: 23px 30px 23px;
+    padding: 23px 15px 23px;
   }
   #header.has-hero.has-hero-mini #hero {
-    padding: 100px 0;
+    padding: 140px 0;
   }
   #header.has-hero.has-hero-mini #dropdown-search {
     top: 70px;
@@ -1605,9 +1630,15 @@ footer #copyright .break {
     width: 70px;
     height: 70px;
   }
+  .intro-list .list-item + .list-item {
+    margin-top: 0;
+  }
   .intro-list .e-score-bubble {
     width: 60px;
     height: 60px;
+  }
+  footer #copyright {
+    text-align: right;
   }
   footer #copyright .break {
     display: inline;
@@ -1713,7 +1744,7 @@ footer #copyright .break {
     margin-top: 70px;
   }
   .dropdown.right .section .container:before {
-    top: -(70px + 20px);
+    top: -90px;
   }
   .well .short {
     width: 60%;
@@ -1791,11 +1822,6 @@ footer #copyright .break {
     height: 50px;
     width: 50px;
   }
-  #header #topnav .nav li.nav-hidden .btn:hover,
-  #header #topnav .nav li.nav-hidden .btn:active,
-  #header #topnav .nav li.nav-hidden .btn:focus {
-    background-color: rgba(137, 87, 216, 0.15);
-  }
   #header #topnav .nav li.nav-hidden .btn .fa {
     top: 0;
     margin: 0;
@@ -1810,25 +1836,33 @@ footer #copyright .break {
   #header #topnav .nav li span.hide-small {
     display: none;
   }
-  #header #topnav .nav li + li {
-    border-left: none;
-  }
-  #header.has-hero #topnav .nav li + li {
-    border-left: none;
-  }
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn {
     color: #ffffff;
   }
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:hover,
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:active,
   #header.has-hero.has-hero-mini #topnav .nav li.nav-hidden .btn:focus {
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #0075d1;
   }
   #header #hero {
     padding: 75px 0 50px;
   }
   #dropdown-search .section:before {
     right: 15px;
+  }
+  .product-category-list ul .incentives .fa {
+    font-size: 40px;
+  }
+  .product-category-list ul .incentives p {
+    font-size: 12px;
+  }
+  footer .companies img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  footer .companies p {
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1880,11 +1914,12 @@ footer #copyright .break {
   }
   .results table .button .btn.btn-small {
     font-size: 10px;
-    font-weight: 500;
     padding: 5px 10px;
   }
   .results .more-results {
     padding: 15px 15px 5px;
   }
+  .product-category-list .btn {
+    font-size: 10px;
+  }
 }
-
