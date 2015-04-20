@@ -272,22 +272,22 @@ hr {
 		display: block;
 		text-align: left;
 		margin-bottom: 24px;
+	}
 
-		.label {
-			text-transform: uppercase;
-			font-size: 13px;
-			line-height: 1.2;
-			display: block;
-			color: @text-color;
-			text-align: left;
-			font-weight: 500;
-			padding: 0;
-			margin-bottom: 4px;
-			border-radius: 0;
+	.label {
+		text-transform: uppercase;
+		font-size: 13px;
+		line-height: 1.2;
+		display: block;
+		color: @text-header-light;
+		text-align: left;
+		font-weight: 500;
+		padding: 0;
+		margin-bottom: 4px;
+		border-radius: 0;
 
-			small {
-				color: lighten(@text-color,20%);
-			}
+		small {
+			color: lighten(@text-color,20%);
 		}
 	}
 
@@ -309,6 +309,54 @@ hr {
 			float: left;
 			width: 50%;
 			padding: 0px 12px;
+		}
+	}
+
+	.item {
+		span.inline {
+			display: inline-block;
+			padding: 0 12px;
+			line-height: 40px;
+			width: auto;
+			max-width: 30%;
+		}
+
+		input.inline {
+			display: inline;
+			width: auto;
+			max-width: 30%;
+		}
+
+		.check-list {
+			overflow: hidden;
+			margin: 0 -12px;
+
+			label {
+				width: 25%;
+				float: left;
+				padding: 0 12px;
+				margin: 0;
+				font-weight: 300;
+
+				input {
+					display: inline;
+					width: auto;
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+
+	.item + .item {
+		margin-top: 24px;
+	}
+}
+
+.section-darkest {
+	.form {
+		input {
+			border: none;
+			background-color: lighten(@bg-darkest, 5%);
 		}
 	}
 }
@@ -544,7 +592,8 @@ hr {
 	min-height: @nav-size;
 	background-color: @bg-darker;
 
-	h2 {
+	p.results {
+		font-size: 20px;
 		line-height: @nav-size;
 		display: inline-block;
 		margin: 0;
@@ -856,7 +905,8 @@ hr {
 	}
 
 	.categories {
-		margin: -15px auto;
+		margin-top: -15px;
+		margin-bottom: -15px;
 
 		.category {
 			margin: 15px 0;

@@ -10,7 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet/less" href="assets/style.less" type="text/text">
+    <link rel="stylesheet" href="assets/style.css" type="text/text">
 
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/ie.css" type="text/css">
@@ -69,39 +69,31 @@
 					<hr>
 
 					<div class="categories row">
-						<div class="category col-xs-6 col-sm-6 col-md-3">
-							<p class="subtitle">TV & Video</p>
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Appliances</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Clothes Dryers</a></li>
+								<li><a href="results.html">Clothes Washers</a></li>
+								<li><a href="results.html">Dishwashers</a></li>
+								<li><a href="results.html">Freezers</a></li>
+								<li><a href="results.html">Refrigerators</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Electronics</p>
 							<ul class="nav nav-topic">
 								<li><a href="results.html">Televisions</a></li>
-								<li><a href="results.html">Projectors</a></li>
-								<li><a href="results.html">Video Game Consoles</a></li>
-							</ul>
-						</div>
-
-						<div class="category col-xs-6 col-sm-6 col-md-3">
-							<p class="subtitle">Computers</p>
-							<ul class="nav nav-topic">
 								<li><a href="results.html">Monitors</a></li>
-								<li><a href="results.html">Tablets</a></li>
 							</ul>
 						</div>
 
-						<div class="category col-xs-6 col-sm-6 col-md-3">
-							<p class="subtitle">Kitchen</p>
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Other</p>
 							<ul class="nav nav-topic">
-								<li><a href="results.html">Refrigerators</a></li>
-								<li><a href="results.html">Freezers</a></li>
-								<li><a href="results.html">Dishwashers</a></li>
-							</ul>
-						</div>
-
-						<div class="category col-xs-6 col-sm-6 col-md-3">
-							<p class="subtitle">Home</p>
-							<ul class="nav nav-topic">
-								<li><a href="results.html">Washers</a></li>
-								<li><a href="results.html">Dryers</a></li>
-								<li><a href="results.html">Air Conditions</a></li>
-								<li><a href="results.html">Light Bulbs</a></li>
+								<li><a href="results.html">Lighting</a></li>
+								<li><a href="results.html">Gas Water Heaters</a></li>
+								<li><a href="results.html">Electric Water Heaters</a></li>
 							</ul>
 						</div>
 					</div>
@@ -131,7 +123,7 @@
 
 		<div class="search-filter">
 			<div class="container">
-				<h2>569 of <strong>569</strong> televisions</h2>
+				<p class="results">569 of <strong>569</strong> televisions</p>
 				<button type="button" class="btn btn-accent" data-target="#dropdown-filter" data-toggle="collapse">Search & Filter</button>
 			</div>
 		</div>
@@ -142,69 +134,76 @@
 					<div class="row">
 						<div class="col-sm-12 col-md-6">
 							<p class="subtitle">Price & Style</p>
-							<div class="set">
-								<span class="label">Price</span>
-								<input type="text" name="price-min" placeholder="70">
-								<span>to</span>
-								<input type="text" name="price-max" placeholder="4000">
-							</div>
 
-							<div class="set">
-								<span class="label">Display Type</span>
+							<div class="form">
+								<div class="item">
+									<span class="label">Price (in USD)</span>
+									<input class="inline" type="text" name="price-min" placeholder="70">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="4000">
+								</div>
 
-								<label>
-									<input type="checkbox" name="display-type" value="LED">
-									LED
-								</label>
+								<div class="item">
+									<span class="label">Display Type</span>
 
-								<label>
-									<input type="checkbox" name="display-type" value="LCD">
-									LCD
-								</label>
+									<div class="check-list">
+										<label>
+											<input type="checkbox" name="display-type" value="LED">
+											LED
+										</label>
 
-								<label>
-									<input type="checkbox" name="display-type" value="Plasma">
-									Plasma
-								</label>
-							</div>
+										<label>
+											<input type="checkbox" name="display-type" value="LCD">
+											LCD
+										</label>
 
-							<div class="set">
-								<span class="label">Brand Name</span>
-								<input type="text" name="brand-name" placeholder="brand name">
-								<p class="note">Select one more more brand names</p>
+										<label>
+											<input type="checkbox" name="display-type" value="Plasma">
+											Plasma
+										</label>
+									</div>
+								</div>
+
+								<div class="item">
+									<span class="label">Brand Name</span>
+									<input type="text" name="brand-name" placeholder="brand name">
+									<p class="note"><small>Select one or more brand names</small></p>
+								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-6">
 							<p class="subtitle">Dimensions & Features</p>
 
-							<div class="set">
-								<span class="label">Screen Size</span>
-								<input type="text" name="size-min" placeholder="7">
-								<span>to</span>
-								<input type="text" name="size-max" placeholder="98">
-								<span>inches</span>
+							<div class="form">
+								<div class="item">
+									<span class="label">Screen Size (in inches)</span>
+									<input class="inline" type="text" name="size-min" placeholder="7">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="size-max" placeholder="98">
+								</div>
+
+								<div class="item">
+									<span class="label">Resolution</span>
+									<input type="text" name="resolution" placeholder="Screen resolution">
+									<p class="note"><small>Select one or more screen resolutions</small></p>
+								</div>	
+
+								<div class="item">
+									<span class="label">3D Ready</span>
+
+									<div class="check-list">
+										<label>
+											<input type="checkbox" name="3d-ready" value="yes">
+											Yes
+										</label>
+
+										<label>
+											<input type="checkbox" name="3d-ready" value="No">
+											No
+										</label>
+									</div>
+								</div>
 							</div>
-
-							<div class="set">
-								<span class="label">Resolution</span>
-								<input type="text" name="resolution" placeholder="Screen resolution">
-								<p class="note">Select one more more screen resolutions</p>
-							</div>	
-
-							<div class="set">
-								<span class="label">3D Ready</span>
-
-								<label>
-									<input type="checkbox" name="3d-ready" value="yes">
-									Yes
-								</label>
-
-								<label>
-									<input type="checkbox" name="3d-ready" value="No">
-									No
-								</label>
-							</div>
-						
 						</div>
 					</div>
 				</div>

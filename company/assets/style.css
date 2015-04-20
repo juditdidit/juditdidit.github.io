@@ -208,19 +208,19 @@ hr.short {
   text-align: left;
   margin-bottom: 24px;
 }
-.form label .label {
+.form .label {
   text-transform: uppercase;
   font-size: 13px;
   line-height: 1.2;
   display: block;
-  color: #7c7c7c;
+  color: #cccccc;
   text-align: left;
   font-weight: 500;
   padding: 0;
   margin-bottom: 4px;
   border-radius: 0;
 }
-.form label .label small {
+.form .label small {
   color: #afafaf;
 }
 .form input {
@@ -240,6 +240,41 @@ hr.short {
   float: left;
   width: 50%;
   padding: 0px 12px;
+}
+.form .item span.inline {
+  display: inline-block;
+  padding: 0 12px;
+  line-height: 40px;
+  width: auto;
+  max-width: 30%;
+}
+.form .item input.inline {
+  display: inline;
+  width: auto;
+  max-width: 30%;
+}
+.form .item .check-list {
+  overflow: hidden;
+  margin: 0 -12px;
+}
+.form .item .check-list label {
+  width: 25%;
+  float: left;
+  padding: 0 12px;
+  margin: 0;
+  font-weight: 300;
+}
+.form .item .check-list label input {
+  display: inline;
+  width: auto;
+  margin-right: 12px;
+}
+.form .item + .item {
+  margin-top: 24px;
+}
+.section-darkest .form input {
+  border: none;
+  background-color: #666666;
 }
 .modal .modal-body {
   padding: 25px;
@@ -409,7 +444,8 @@ hr.short {
   min-height: 70px;
   background-color: #f5f4f5;
 }
-.search-filter h2 {
+.search-filter p.results {
+  font-size: 20px;
   line-height: 70px;
   display: inline-block;
   margin: 0;
@@ -673,7 +709,8 @@ hr.short {
   color: #cccccc;
 }
 .dropdown .categories {
-  margin: -15px auto;
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 .dropdown .categories .category {
   margin: 15px 0;
