@@ -1,0 +1,47 @@
+@accent-main: 			#8957d8;
+@accent-sub: 			#0075d1;
+@accent-alt: 			@accent-sub;
+
+@background-light: 		#ffffff;
+@background-darker: 	#f5f4f5;
+@background-darkest: 	#595959;
+
+@text-normal: 			#7c7c7c;
+@text-darker: 			darken(@text-normal,10%);
+@text-light: 			lighten(@background-darkest,50%);
+@text-lighter: 			ligthen(@text-light,10%);
+@text-link: 			@accent-sub;
+
+@text-topnav-hero:		#ffffff;
+@text-topnav-normal: 	@text-normal;
+@text-topnav-hover: 	@text-link;
+
+@font-family: 			'Roboto', sans-serif;
+.font-size {
+	font-size: 16px;
+	line-height: 1.4;
+}
+.font-size-small {
+	font-size: 12px;
+	line-height: 1.2;
+}
+
+@button-normal: 		#ebe9eb;
+@button-accent:			@accent-main;
+@button-accent-text:	lighten(desaturate(@accent-main,30%),50%);
+@table-header: 			@accent-alt;
+@table-header-text:		lighten(desaturate(@accent-alt,30%),50%);
+@table-column-hover:	lighten(@accent-sub,70%);
+
+@score-indicator: 		@accent-main;
+@score-value: 			@accent-sub;
+@rebate: 				@accent-sub;
+@savings-yes: 			blue;
+@savings-no: 			red;
+
+@hero-image: 			url('img/hero-enervee.jpg');
+@hero-position: 		center bottom;
+@hero-slogan: 			@accent-main;
+
+@footer-background: 	@background-darkest;
+@dropdown-background: 	@background-darkest;

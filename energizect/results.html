@@ -1,0 +1,509 @@
+<!-- HEAD START -->
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Enervee Efficient Product Finder</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css" type="text/text">
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/ie.css" type="text/css">
+    <![endif]-->
+
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/less/less.min.js" type="text/javascript"></script>
+    <script src="assets/modernizr/modernizr.custom.80207.js" type="text/javascript"></script>
+    <script src="../assets/script.js" type="text/javascript"></script>
+</head>
+<!-- HEAD END -->
+
+
+
+<!-- HEADER-ALL START -->
+<body class="preload">
+	<header id="header">
+		<nav id="topnav">
+			<div class="container-fluid">
+				<a class="logo" href="index.html">
+					<img class="hidden-xs" src="assets/img/logo-energizect-color.png" alt="Energize Connecticut">
+					<img class="visible-xs" src="assets/img/logo-energizect-color-small.png" alt="Energize Connecticut">
+				</a>
+				
+				<ul class="nav">
+					<li><a href=""><span class="hidden-xs">your state: </span>CA <i class="fa fa-sort-desc"></i></a></li>
+					<li class="nav-show"><a data-toggle="collapse" href="#dropdown-search"><span class="hidden-xs">Search </span>Products <i class="fa fa-sort-desc"></i></a></li>
+					<li><a href="about.html">support</a></li>
+					<li class="right nav-hidden">
+						<button type="button" class="btn" data-target="#dropdown-search" data-toggle="collapse"><i class="fa fa-search"></i></button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section id="dropdown-search" class="dropdown collapse">
+			<div class="section section-darkest">
+				<div class="container">
+					<p class="subtitle">Search for Products:</p>
+					<div class="row">
+						<div class="col-sm-12 col-md-9">
+							<form>
+								<div class="search">
+									<input type="text" placeholder="brand, model, or appliance type...">
+									<button type="button"><i class="fa fa-search"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="categories row">
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Appliances</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Clothes Dryers</a></li>
+								<li><a href="results.html">Clothes Washers</a></li>
+								<li><a href="results.html">Dishwashers</a></li>
+								<li><a href="results.html">Freezers</a></li>
+								<li><a href="results.html">Refrigerators</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Electronics</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Televisions</a></li>
+								<li><a href="results.html">Monitors</a></li>
+							</ul>
+						</div>
+
+						<div class="category col-xs-6 col-md-3">
+							<p class="subtitle">Other</p>
+							<ul class="nav nav-topic">
+								<li><a href="results.html">Lighting</a></li>
+								<li><a href="results.html">Gas Water Heaters</a></li>
+								<li><a href="results.html">Electric Water Heaters</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- HEADER-ALL END -->
+
+
+
+<!-- CONTENT START -->
+		<section class="section topic-head topic-head-results">
+			<div class="container">		
+				<div class="section-title">		
+					<div class="info">
+						<h2>Save on your bill and <strong>get an easy online rebate.</strong></h2>
+						<p>Shop energy-smart to cut your energy cost, get an online rebate and find the lowest price.
+						<br>Click on the <a href="">Search & Filter</a> button to find the model that is right for you
+						and get your rebate
+						<br>application processed right away.</p>
+					</div>
+
+					<div class="product">
+						<img src="assets/img/electronics-dryer.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="search-filter">
+			<div class="container">
+				<p class="results">216 of <strong>216</strong> Dryers</p>
+				<button type="button" class="btn btn-accent" data-target="#dropdown-filter" data-toggle="collapse">Search & Filter</button>
+			</div>
+		</div>
+
+		<section id="dropdown-filter" class="dropdown right collapse">
+			<div class="section section-darkest">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<p class="subtitle">Price & Style</p>
+
+							<div class="form">
+								<div class="item">
+									<span class="label">Price (in USD)</span>
+									<input class="inline" type="text" name="price-min" placeholder="70">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="4000">
+								</div>
+
+								<div class="item">
+									<span class="label">Size</span>
+
+									<div class="check-list">
+										<label>
+											<input type="checkbox" name="display-type" value="Standard">
+											Standard
+										</label>
+
+										<label>
+											<input type="checkbox" name="display-type" value="Compact">
+											Compact
+										</label>
+									</div>
+								</div>
+
+								<div class="item">
+									<span class="label">Brand Name</span>
+									<input type="text" name="brand-name" placeholder="brand name">
+									<p class="note"><small>Select one or more brand names</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<p class="subtitle">Dimensions & Features</p>
+
+							<div class="form">
+								<div class="item">
+									<span class="label">Capacity (in FT<sup><small>3</small></sup>)</span>
+									<input class="inline" type="text" name="price-min" placeholder="2.6">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="10.0">
+								</div>
+
+								<div class="item">
+									<span class="label">Height (in inches)</span>
+									<input class="inline" type="text" name="price-min" placeholder="27.5">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="47.0">
+								</div>
+
+								<div class="item">
+									<span class="label">Width (in inches)</span>
+									<input class="inline" type="text" name="price-min" placeholder="19.0">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="46.0">
+								</div>
+
+								<div class="item">
+									<span class="label">Depth (in inches)</span>
+									<input class="inline" type="text" name="price-min" placeholder="17.25">
+									<span class="inline">to</span>
+									<input class="inline" type="text" name="price-max" placeholder="36.0">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="results results-list">
+					<div id="results">
+						<table>
+							<thead>
+								<tr>
+									<td class="product">Popularity</td>
+									<td class="e-score">
+										Energy Score
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-score-info" class="hover-info-box">
+												<h2>Energy Score out of 100</h2>
+												<p>A universal way of comparing a product's energy use against all similar-sized models.</p>
+											</div>
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">Capacity</td>
+									<td class="purchase-price hidden-xs hidden-sm">Purchase Price</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md">
+										Energy Savings 
+										<div class="hover-info">
+											<i class="fa fa-info-circle"></i>
+											<div id="e-savings-info" class="hover-info-box">
+												<h2>Energy Savings Over 14 Years</h2>
+												<p>The estimated lifetime electrical energy savings for this product, compared to energy cost for a basic model of this size.</p>
+											</div>
+										</div>
+									</td>
+									<td class="button">Online Rebate</td>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2015/04/13/132627678_prod_1371269112_enervee_small_85x85.jpg">
+										</div>
+										<div class="right">
+											<span class="name">LG</span>
+											<small>DLHX4072W</small>
+											<div class="rating">
+												<div class="empty">
+													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+												</div>
+												<div class="full" style="width:100%">
+													<span>
+														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+													</span>
+												</div>	
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<svg version="1.1" viewBox="0 0 60 60" class="e-score-bubble">
+											<g>
+												<circle cx="30" cy="30" r="30" class="outer indicator"></circle>
+												<circle cx="30" cy="30" r="24" class="inner"></circle>
+												<text x="30" y="38" text-anchor="middle" class="score">100</text>
+											</g>
+										</svg>
+
+										<div class="valign-bottom">
+											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										7.3
+										<small>Cubic Feet</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$1,440
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$378
+									</td>
+									<td class="button"><a href="product.html" class="btn btn-accent btn-small">get $200</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2015/03/30/131729949_1298935612_enervee_small_85x85.jpg">
+										</div>
+										<div class="right">
+											<span class="name">Kenmore</span>
+											<small>Elite 81592</small>
+											<div class="rating">
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<svg version="1.1" viewBox="0 0 60 60" class="e-score-bubble">
+											<g>
+												<circle cx="30" cy="30" r="30" class="outer"></circle>
+												<path d="M30,30L30,0A30,30 349.2 1,1 24.37856056242826,0.5313824781393384z" class="indicator"></path>
+												<circle cx="30" cy="30" r="24" class="inner"></circle>
+												<text x="30" y="38" text-anchor="middle" class="score">97</text>
+											</g>
+										</svg>
+
+										<div class="valign-bottom">
+											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										7.3
+										<small>Cubic Feet</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$1,440
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$224
+									</td>
+									<td class="button"><a href="product.html" class="btn btn-accent btn-small">get $200</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2015/04/02/132087705_prod_1371181412_enervee_small_85x106.jpg">
+										</div>
+										<div class="right">
+											<span class="name">Whirlpool</span>
+											<small>WED99HEDW</small>
+											<div class="rating">
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<svg version="1.1" viewBox="0 0 60 60" class="e-score-bubble">
+											<g>
+												<circle cx="30" cy="30" r="30" class="outer indicator"></circle>
+												<circle cx="30" cy="30" r="24" class="inner"></circle>
+												<text x="30" y="38" text-anchor="middle" class="score">100</text>
+											</g>
+										</svg>
+
+										<div class="valign-bottom">
+											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										7.3
+										<small>Cubic Feet</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$1,530
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$454
+									</td>
+									<td class="button"><a href="product.html" class="btn btn-accent btn-small">get $200</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2015/04/13/132627685_prod_1371269812_enervee_small_85x85.jpg">
+										</div>
+										<div class="right">
+											<span class="name">LG</span>
+											<small>DLHX4072V</small>
+											<div class="rating">
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<svg version="1.1" viewBox="0 0 60 60" class="e-score-bubble">
+											<g>
+												<circle cx="30" cy="30" r="30" class="outer indicator"></circle>
+												<circle cx="30" cy="30" r="24" class="inner"></circle>
+												<text x="30" y="38" text-anchor="middle" class="score">100</text>
+											</g>
+										</svg>
+
+										<div class="valign-bottom">
+											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										7.3
+										<small>Cubic Feet</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$1,530
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$378
+									</td>
+									<td class="button"><a href="product.html" class="btn btn-accent btn-small">get $200</a></td>
+								</tr>
+
+								<tr>
+									<td class="product">
+										<div class="left">
+											<img src="http://s3.enervee.com/img/2015/03/30/131729942_1298935512_enervee_small_85x85.jpg">
+										</div>
+										<div class="right">
+											<span class="name">Kenmore</span>
+											<small>Elite 81593</small>
+											<div class="rating">
+											</div>
+										</div>
+									</td>
+									<td class="e-score">
+										<svg version="1.1" viewBox="0 0 60 60" class="e-score-bubble">
+											<g>
+												<circle cx="30" cy="30" r="30" class="outer"></circle>
+												<path d="M30,30L30,0A30,30 349.2 1,1 24.37856056242826,0.5313824781393384z" class="indicator"></path>
+												<circle cx="30" cy="30" r="24" class="inner"></circle>
+												<text x="30" y="38" text-anchor="middle" class="score">97</text>
+											</g>
+										</svg>
+
+										<div class="valign-bottom">
+											<img src="http://s3.enervee.com/media/certs/estar.png" height="24">
+										</div>
+									</td>
+									<td class="data-info hidden-xs hidden-sm hidden-md">
+										7.3
+										<small>Cubic Feet</small>
+									</td>
+									<td class="purchase-price hidden-xs hidden-sm">
+										$1,500
+									</td>
+									<td class="e-savings hidden-xs hidden-sm hidden-md esavings">
+										<small>Up to</small>
+										$224
+									</td>
+									<td class="button"><a href="product.html" class="btn btn-accent btn-small">get $200</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="more-results">
+							<button type="button" class="btn btn-accent btn-full">
+								Load More Results
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+<!-- CONTENT END -->
+
+
+
+<!-- FOOTER START -->
+	<footer class="section section-darkest no-logo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<p class="title">Discover</p>
+							<ul class="nav nav-topic">
+								<li><a href="">Home</a></li>
+								<li><a href="">About Us</a></li>
+								<li><a href="">Energize CT</a></li>
+								<li><a href="">Utility Partners</a></li>
+								<li><a href="">Privacy Policy</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
+						</div>
+
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<p class="title">Join Us</p>
+							<ul class="nav nav-topic">
+								<li><a href="">Twitter</a></li>
+								<li><a href="">Facebook</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 companies">
+					<img src="assets/img/logo-energizect-footer.png"><p>Energize Connecticut<sup><small>SM</small></sup> helps you save money and use clean energy. It is an initiative of the Energy Efficiency Fund, the Clean Energy Finance and Investment Authority, the State and your local electric and gas utilities with funding from a charge on customer energy bills.</p>
+					<hr class="short">
+					<img src="assets/img/footer-logo-enervee.png"><p>Energize Connecticut is using the Enervee<sup><small>&reg;</small></sup> data & marketing platform to capture, analyze and present all the latest appliances and electronics products.</p>
+				</div>
+			</div>
+
+			<!-- <p class="disclaimer"><small></small></p> -->
+
+			<div id="copyright">
+				<small>&copy;2015 <a href="">Enervee Corporation</a>.<span class="break"> </span>All rights reserved.</small>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<!-- FOOTER END -->
