@@ -4,12 +4,10 @@
 
 @background-light: 		#ffffff;
 @background-darker: 	#f5f4f5;
-@background-darkest: 	#595959;
 
 @text-normal: 			#7c7c7c;
 @text-darker: 			darken(@text-normal,10%);
-@text-lighter: 			#ffffff;
-@text-light: 			darken(@text-lighter,50%);
+@text-light: 			#ffffff;
 @text-link: 			@accent-sub;
 
 @text-topnav-hero:		#ffffff;
@@ -39,9 +37,16 @@
 @savings-yes: 			blue;
 @savings-no: 			red;
 
-@hero-image: 			url('img/hero-enervee.jpg');
+@hero-image: 			url('img/hero-enervee2.jpg');
 @hero-position: 		center bottom;
 @hero-slogan: 			@accent-main;
 
-@footer-background: 	@background-darkest;
-@dropdown-background: 	@background-darkest;
+@footer-background:		#595959;
+@footer-text:			lighten(@footer-background,20%);
+@footer-title:			lighten(@footer-text,25%);
+@footer-link:			lighten(@footer-text,25%);
+
+@dropdown-background:	#595959;
+@dropdown-text:			lighten(@dropdown-background,20%);
+@dropdown-title:		lighten(@dropdown-text,25%);
+@dropdown-link:			lighten(@dropdown-background,20%);

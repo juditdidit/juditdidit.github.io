@@ -42,7 +42,7 @@ h1 {
 	font-weight: 400;
 }
 
-h2, h3 {
+h2 {
 	font-weight: 300;
 	font-size: 28px;
 }
@@ -51,27 +51,17 @@ h1, h2 {
 	margin-bottom: 30px;
 }
 
-h2 {
-	&.heading {
-		&-smaller {
-			.font-size;
-			margin-bottom: 12px;
-			font-weight: 400;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			color: @accent-main;
-		}
-	}
+h3,
+.heading {
+	.font-size;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: @accent-main;
+	margin-bottom: 30px;
 }
 
 p {
 	margin-bottom: 18px;
-
-	&.subtitle {
-		font-weight: 400;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
 
 	&.lead {
 		font-size: 22px;
@@ -81,7 +71,7 @@ p {
 	&.disclaimer {
 		small {
 			.font-size-small;
-			color: lighten(@text-normal, 10%);
+			color: lighten(@text-normal,10%);
 			font-weight: 400;
 		}
 	}
@@ -100,7 +90,7 @@ a {
 	&:active,
 	&:focus {
 		text-decoration: none;
-		color: darken(@text-link, 10%);
+		color: darken(@text-link,6%);
 	}
 }
 
@@ -130,7 +120,19 @@ ul {
 	}
 }
 
-/*FIX: BUTTONS */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:active,
+input:active,
+textarea:active,
+select:active {
+	outline: none !important;
+	outline-color: transparent !important;
+	outline-style: none !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
 
 hr {
 	margin: 50px 0;
@@ -167,8 +169,8 @@ hr {
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: darken(@button-normal, 10%);
-		color: darken(@text-normal, 10%);
+		background-color: darken(@button-normal,6%);
+		color: darken(@text-normal,6%);
 	}
 
 	&&-small {
@@ -190,7 +192,8 @@ hr {
 		&:hover,
 		&:active,
 		&:focus {
-			background-color: darken(@button-accent, 10%);
+			color: @button-accent-text;
+			background-color: darken(@button-accent,6%);
 		}
 	}
 
@@ -212,7 +215,7 @@ hr {
 	right: 0px;
 	font-size: 16px;
 	line-height: 16px;
-	color: lighten(@text-normal, 35%);
+	color: lighten(@text-normal,35%);
 
 	&:hover,
 	&:active,
@@ -220,8 +223,6 @@ hr {
 		color: @text-normal;
 	}
 }
-
-/* FIX: FORM */
 
 .modal {
 	.modal-body {
@@ -272,17 +273,17 @@ hr {
 		padding: 0;
 	}
 
-	&&.-topic li {
-		padding: 4px 0;
-	}
-
-	&&-topic a {
+	&.nav-topic li {
 		padding: 0;
 
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: transparent;
+		a {
+			padding: 4px 0;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: transparent;
+			}
 		}
 	}
 }
@@ -374,19 +375,136 @@ hr {
 		}
 	}
 
-	/* FIX: DARKEST */
-	&.section-darkest {
-		background-color: @background-darkest;
-		color: lighten(@background-darkest,25%);
+	&.section-dropdown {
+		background-color: @dropdown-background;
+		color: @dropdown-text;
+		position: relative;
+		z-index: 2;
 
-		.title {
-			color: lighten(@background-darkest,50%);
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			margin-left: -10px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: transparent transparent @dropdown-background transparent;
+		}
+
+		.title,
+		.heading {
+			color: @dropdown-title;
+			margin-bottom: 18px;
 		}
 
 		a {
-			color: lighten(@background-darkest,25%);
+			color: @dropdown-link;
 			font-weight: 300;
-			padding: 0;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: lighten(@dropdown-link,25%);
+			}
+		}
+
+		hr {
+			background-color: lighten(@dropdown-background,5%);
+		}
+
+		.form {
+			input {
+				.font-size;
+				height: 40px;
+				border: none;
+				padding: 10px 20px;
+				line-height: 20px;
+				border-radius: 4px;
+				background-color: lighten(@dropdown-background,5%);
+				width: 100%;
+				color: @dropdown-title;
+			}
+
+			.search {
+				button {
+					color: @dropdown-text;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: @dropdown-title;
+					}
+				}
+			}
+		}
+	}
+}
+
+.form {
+	margin: 0 -12px -25px;
+
+	.item {
+		padding: 0 12px 25px;
+	}
+
+	.set {
+		overflow: hidden;
+
+		&.set-2 {
+			.item {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+
+	label {
+		display: block;
+		text-align: left;
+	}
+
+	.label {
+		text-transform: uppercase;
+		.font-size-small;
+		display: block;
+		color: @text-normal;
+		font-weight: 500;
+		padding: 0;
+		margin-bottom: 4px;
+		border-radius: 0;
+
+		small {
+			.font-size-small;
+			color: lighten(@text-normal,20%);
+		}
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		border: 1px solid darken(@background-darker,10%);
+		border-radius: 4px;
+		padding: 9px 15px;
+		line-height: 20px;
+		color: @text-normal;
+	}
+
+	.search {
+		position: relative;
+
+		button {
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+			line-height: 20px;
+			border: none;
+			background-color: transparent;
+			border-radius: 0;
+			position: absolute;
+			top: 0;
+			right: 12px;
 			-webkit-transition: color 0.4s;
 			-moz-transition: color 0.4s;
 			-o-transition: color 0.4s;
@@ -395,23 +513,8 @@ hr {
 			&:hover,
 			&:active,
 			&:focus {
-				color: lighten(@background-darkest,50%);
+				color: @accent-main;
 			}
-		}
-
-		article a {
-			color: lighten(@background-darkest,50%);
-			font-weight: 500;
-
-			&:hover,
-			&:active,
-			&:focus {
-				color: lighten(@background-darkest,65%);
-			}
-		}
-
-		hr {
-			background-color: lighten(@background-darkest,5%);
 		}
 	}
 }
@@ -570,7 +673,7 @@ hr {
 		box-shadow: none;
 
 		#topnav {
-			background-image: url('../../assets/img/topnav-gradient-50px');
+			background-image: url('../../assets/img/topnav-gradient-50.png');
 			background-repeat: repeat-x;
 			background-position: top left;
 		}
@@ -591,7 +694,7 @@ hr {
 
 				h1 {
 					margin-bottom: 0;
-					color: @text-lighter;
+					color: @text-light;
 
 					.accent {
 						color: @accent-sub;
@@ -615,7 +718,7 @@ hr {
 				&:hover,
 				&:focus,
 				&:active {
-					color: darken(@accent-main, 10%);
+					color: darken(@accent-main,6%);
 				}
 			}
 		}
@@ -651,7 +754,7 @@ hr {
 			.nav {
 				li {
 					a {
-						color: @text-light;
+						color: @text-topnav-hero;
 
 						&:hover, 
 						&:active,
@@ -677,7 +780,7 @@ hr {
 	padding-bottom: 20px;
 }
 
-.dropdown-search {
+/*.dropdown {
 	position: relative;
 	z-index: 5;
 
@@ -715,7 +818,7 @@ hr {
 	}
 
 	.subtitle {
-		color: @text-lighter;
+		color: @text-light;
 	}
 
 	a {
@@ -724,7 +827,7 @@ hr {
 		&:hover, 
 		&:active,
 		&:focus {
-			color: @text-lighter;
+			color: @text-light;
 		}
 	}
 
@@ -737,7 +840,7 @@ hr {
 			min-height: 130px;
 		}
 	}
-}
+}*/
 
 .white-box {
 	height: 30px;
@@ -753,23 +856,17 @@ hr {
 
 		.circle {
 			float: left;
-			width: 80px;
-			height: 80px;
-			margin-top: 8px;
+			width: 60px;
+			height: 60px;
 			margin-right: 30px;
 			display: block;
-			border: 3px solid @accent-sub;
+			border: 6px solid @accent-sub;
 			border-radius: 100%;
 			text-align: center;
 			color: @accent-sub;
-			line-height: 76px;
-			font-size: 32px;
-			font-weight: 300;
-		}
-
-		h3,
-		p.subtitle {
-			margin-bottom: 12px;
+			line-height: 50px;
+			font-size: 24px;
+			font-weight: 800;
 		}
 
 		&.accent-main {
@@ -778,22 +875,25 @@ hr {
 				color: @accent-main;
 			}
 
-			h3,
-			p.subtitle {
+			h3 {
 				color: @accent-main;
 			}
 		}
 
 		&.accent-sub {
-			h3, 
-			p.subtitle {
+			h3 {
 				color: @accent-sub;
 			}
 		}
 
 		.info {
-			padding-left: 120px;
+			margin-top: 6px;
+			padding-left: 90px;
 			padding-right: 150px;
+
+			h3 {
+				margin-bottom: 18px;
+			}
 		}
 
 		.icon {
@@ -854,7 +954,7 @@ hr {
 			font-size: 25px;
 
 			.star-empty {
-				color: darken(@background-darker, 10%);
+				color: darken(@background-darker,6%);
 			}
 		}
 
@@ -993,7 +1093,7 @@ hr {
 					padding: 12px 15px;
 					border-width: 0px 1px;
 					border-style: solid;
-					border-color: lighten(@accent-main, 4%);
+					border-color: lighten(@accent-main,4%);
 				}
 			}
 
@@ -1005,7 +1105,7 @@ hr {
 		tbody {
 			border-width: 0px 1px 1px;
 			border-style: solid;
-			border-color: darken(@background-light, 6%);
+			border-color: darken(@background-light,6%);
 			font-size: 28px;
 			line-height: 1.2;
 
@@ -1023,16 +1123,16 @@ hr {
 						background-color: @accent-sub;
 
 						&:hover {
-							background-color: darken(@accent-sub,10%);
+							background-color: darken(@accent-sub,6%);
 						}
 					}
 				}
 
 				&:nth-child(even) {
-					background-color: lighten(@background-darker, 2%);
+					background-color: lighten(@background-darker,2%);
 					border-width: 1px 0px;
 					border-style: solid;
-					border-color: darken(@background-light, 6%);
+					border-color: darken(@background-light,6%);
 
 					&:hover {
 						background-color: @table-column-hover;
@@ -1044,14 +1144,14 @@ hr {
 							&.btn-accent {
 								&:hover {
 									color: @button-accent-text;
-									background-color: darken(@button-accent, 10%);
+									background-color: darken(@button-accent,6%);
 								}
 							}
 						}
 					}
 
 					.btn {
-						background-color: darken(@button-normal, 10%);
+						background-color: darken(@button-normal,6%);
 
 						&.btn-accent {
 							background-color: @button-accent;
@@ -1080,7 +1180,7 @@ hr {
 							margin-right: auto;
 							font-size: 17px;
 							position: relative;
-							color: darken(@background-darker, 10%);
+							color: darken(@background-darker,6%);
 							letter-spacing: 1px;
 							width: 84px;
 
@@ -1126,7 +1226,7 @@ hr {
 		padding: 30px 30px 20px;
 		border-width: 0px 1px 1px;
 		border-style: solid;
-		border-color: darken(@background-light, 6%);
+		border-color: darken(@background-light,6%);
 		border-radius: 0px 0px 4px 4px;
 		overflow: hidden;
 	}
@@ -1143,7 +1243,7 @@ hr {
 	height: 50px;
 
 	.outer {
-		fill: darken(@background-darker, 7%);
+		fill: darken(@background-darker,7%);
 	}
 
 	.inner {
@@ -1213,7 +1313,7 @@ hr {
 					&:focus .flipper {
 						.card-face, 
 						.card-back {
-							border: 1px solid darken(@background-darker,10%);
+							border: 1px solid darken(@background-darker,6%);
 							-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
 							-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
 							box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
@@ -1276,7 +1376,7 @@ hr {
 				right: 0px;
 				font-size: 16px;
 				line-height: 16px;
-				color: lighten(@text-normal, 35%);
+				color: lighten(@text-normal,35%);
 
 				&:hover,
 				&:active,
@@ -1364,7 +1464,7 @@ hr {
 					margin-top: 20px;
 					font-size: 17px;
 					position: relative;
-					color: darken(@background-darker, 10%);
+					color: darken(@background-darker,7%);
 					letter-spacing: 1px;
 					width: 84px;
 					display: inline-block;
@@ -1557,7 +1657,7 @@ hr {
 .rating {
 	font-size: 17px;
 	position: relative;
-	color: darken(@background-darker,10%);
+	color: darken(@background-darker,7%);
 	letter-spacing: 1px;
 	width: 84px;
 	display: inline-block;
@@ -1720,12 +1820,22 @@ hr {
 }
 
 footer {
+	color: @footer-text;
+
+	&.section-footer {
+		background-color: @footer-background;
+	}
+
 	.container {
 		position: relative;
 	}
 
+	.title {
+		color: @footer-title;
+	}
+
 	.nav li a {
-		color: lighten(@background-darkest,25%);
+		color: @footer-text;
 		font-weight: 300;
 		padding: 0;
 		display: inline;
@@ -1733,8 +1843,18 @@ footer {
 		&:hover,
 		&:active,
 		&:focus {
-			color: lighten(@background-darkest,50%);
+			color: lighten(@footer-text,25%);
 			background-color: transparent;
+		}
+	}
+
+	a {
+		color: @footer-link;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: lighten(@footer-link,10%);
 		}
 	}
 
@@ -1755,7 +1875,7 @@ footer {
 	}
 
 	.bottomnav {
-		border-top: 1px solid lighten(@background-darkest, 5%);
+		border-top: 1px solid lighten(@footer-background,5%);
 		margin-top: 50px;
 		padding-top: 50px;
 		text-align: center;
@@ -1797,6 +1917,13 @@ footer {
 
 		a {
 			font-weight: 500;
+			color: @footer-text;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: lighten(@footer-text,25%);
+			}
 		}
 
 		.break {
@@ -1837,7 +1964,7 @@ footer {
 
 		&.has-hero {
 			#topnav {
-				background-image: url('../../assets/img/topnav-gradient-70px');
+				background-image: url('../../assets/img/topnav-gradient-70.png');
 			}
 
 			&.has-hero-mini {
@@ -1953,7 +2080,7 @@ footer {
 
 	footer {
 		#copyright {
-			text-align: right;
+			text-align: center;
 
 			.break {
 				display: inline;
@@ -2060,10 +2187,6 @@ footer {
 		margin-bottom: 50px;
 	}
 
-	h3 {
-		font-size: 32px;
-	}
-
 	.section {
 		padding: 70px 0;
 
@@ -2164,7 +2287,7 @@ footer {
 		}
 	}
 
-	h1, h2, h3 {
+	h1, h2 {
 		font-size: 28px;
 	}
 
