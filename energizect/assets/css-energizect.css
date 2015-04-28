@@ -1,0 +1,8 @@
+#header.has-hero #topnav {
+  background-image: url('../../assets/img/topnav-gradient-50.png');
+}
+@media screen and (min-width: 768px) {
+  #header.has-hero #topnav {
+    background-image: url('../../assets/img/topnav-gradient-50.png');
+  }
+}
