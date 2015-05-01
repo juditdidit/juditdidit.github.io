@@ -19,12 +19,19 @@ module.exports = function(grunt) {
           src: 'css-*.less',
           ext: '.css',
           dest: 'energizect/assets/'
+        },
+        {
+          expand: true,
+          cwd: 'pge/assets/',
+          src: 'css-*.less',
+          ext: '.css',
+          dest: 'pge/assets/'
         }]
       }
     },
 
     watch: {
-      files: '**/css-*.less',
+      files: '**/*.less',
       tasks: ['less']
     }
   });

@@ -1,10 +1,12 @@
 $(function() {
-	$('#sidenav').affix({
-		offset: {
-			top: ($('#sidenav').offset().top) - 64, // container padding top minus negative margin top
-		}
-	})
+    $('#sidenav').affix({
+        offset: {
+            top: $('#sidenav').offset().top, // initial location of #sidenav
+            bottom: ($('.has-sidebar').outerHeight(true) * -1) // negative height of .has-nav container
+        }
+    });
 
-	console.log($('#sidenav').height());
-	console.log(($('.footer').outerHeight(true)) + 70);
+
+
+
 });

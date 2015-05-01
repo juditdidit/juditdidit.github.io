@@ -3,7 +3,7 @@
     line-height: 0.0001px;
 
     & > * {
-        .font-size; 
+        .font-size(); 
     }
 }
 
@@ -27,7 +27,7 @@ html, body {
     color: @text-normal;
     height: 100%;
     font-family: @font-family;
-    .font-size;
+    .font-size();
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +53,7 @@ h1, h2 {
 
 h3,
 .heading {
-    .font-size;
+    .font-size();
     font-weight: 400;
     text-transform: uppercase;
     color: @accent-main;
@@ -416,7 +416,7 @@ hr {
 
         .form {
             input {
-                .font-size;
+                .font-size();
                 height: 40px;
                 border: none;
                 padding: 10px 20px;
@@ -451,6 +451,14 @@ hr {
             .category:nth-child(3n + 3) {
                 clear: both;
             }
+        }
+    }
+
+    &.section-bar {
+        border-bottom: 1px solid @background-darker;
+
+        &:last-child {
+            border-bottom: none;
         }
     }
 }
@@ -568,12 +576,12 @@ hr {
 }
 
 .search-filter {
-    min-height: 50px;
+    min-height: 70px;
     background-color: @background-darker;
 
     p.results {
         font-size: 20px;
-        line-height: 50px;
+        line-height: 70px;
         display: inline-block;
         margin: 0;
     }
@@ -593,7 +601,7 @@ hr {
     min-height: 50px;
 
     ul {
-        .font-size-reset;
+        .font-size-reset();
 
         li {
             display: inline-block;
@@ -646,7 +654,7 @@ hr {
 
         .nav {
             float: right;
-            .font-size-reset;
+            .font-size-reset();
 
             li {
                 display: inline-block;
@@ -957,7 +965,7 @@ hr {
         list-style: none;
         margin: -24px -12px;
         padding: 0;
-        .font-size-reset;
+        .font-size-reset();
 
         li {
             text-align: center;
@@ -1044,7 +1052,7 @@ hr {
                     padding: 12px 15px;
                     border-width: 0px 1px;
                     border-style: solid;
-                    border-color: lighten(@accent-main,4%);
+                    border-color: lighten(@table-header,4%);
                 }
             }
 
@@ -1215,7 +1223,7 @@ hr {
 .stack {
     list-style: none;
     list-style-type: none;
-    .font-size-reset;
+    .font-size-reset();
     margin: -6px;
     padding: 0;
 
@@ -1520,10 +1528,14 @@ hr {
     }
 }
 
-.has-sidebar {
-    .sidebar {
+.has-sidebar {  
+    &.section {
+        padding: 0;
+    }
+
+    .sidebar {   
         .affix {
-            top: 70px;
+            top: 0px;
         }
 
         .affix-top {
@@ -1531,24 +1543,35 @@ hr {
         }
 
         .affix-bottom {
-            position: relative;
-            background-color: pink;
+            position: absolute;
+        }
+
+        .sidebar-container {
+            padding-top: 70px;
         }
 
         .nav {
-            .font-size-reset;
+            .font-size-reset();
             margin-top: -6px;
 
             li {
                 &.active {
                     a {
-                        font-weight: 500;
+                        color: @accent-sub;
+                        font-weight: 400;
                     }
                 }
             }
 
             a {
+                color: @text-normal;
                 padding: 6px 0;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: @accent-sub;
+                }
             }
         }
     }
@@ -1659,7 +1682,7 @@ hr {
 
     .energy-savings-calc {
         overflow: hidden;
-        margin: 0 auto 18px;
+        margin: 0 auto;
 
         span {
             display: block;
@@ -1692,7 +1715,7 @@ hr {
 
     .compare-items {
         overflow: hidden;
-        margin: 0 auto 18px;
+        margin: 0 auto;
 
         & > div {
             float: left;
@@ -1715,7 +1738,7 @@ hr {
             &-others {
                 font-size: 45px;
                 line-height: 50px;
-                .font-size-reset;
+                .font-size-reset();
 
                 & > span {
                     vertical-align: middle;
@@ -1775,6 +1798,10 @@ footer {
 
     &.section-footer {
         background-color: @footer-background;
+
+        hr {
+            background-color: lighten(@footer-background,5%);
+        }
     }
 
     .container {
@@ -1832,7 +1859,7 @@ footer {
         text-align: center;
 
         ul {
-            .font-size-reset;
+            .font-size-reset();
             margin: 0 -15px;
 
             li {
@@ -1982,6 +2009,7 @@ footer {
     #dropdown-search {
         .section:before {
             right: 172px;
+            left: auto;
         }
     }
 
@@ -2046,6 +2074,18 @@ footer {
 
 // laptop
 @media screen and (min-width: 992px) {
+    .section {
+        &.section-dropdown {
+            .categories {
+                .category { 
+                    &:nth-child(3n + 3) {
+                        clear: none;
+                    }
+                }
+            }
+        }
+    }
+
     .featured {
         margin: 0 auto;
 

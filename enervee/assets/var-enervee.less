@@ -15,11 +15,12 @@
 @text-topnav-hover:     @text-link;
 
 @font-family:           'Roboto', sans-serif;
-.font-size {
+
+.font-size() {
     font-size: 16px;
     line-height: 1.4;
 }
-.font-size-small {
+.font-size-small() {
     font-size: 12px;
     line-height: 1.2;
 }
@@ -27,8 +28,8 @@
 @button-normal:         #ebe9eb;
 @button-accent:         @accent-main;
 @button-accent-text:    lighten(desaturate(@accent-main,30%),50%);
-@table-header:          @accent-alt;
-@table-header-text:     lighten(desaturate(@accent-alt,30%),50%);
+@table-header:          @accent-main;
+@table-header-text:     lighten(desaturate(@accent-main,30%),50%);
 @table-column-hover:    lighten(@accent-sub,70%);
 
 @score-indicator:       @accent-main;

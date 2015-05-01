@@ -1,30 +1,24 @@
-<!-- HEAD START -->
+<!-- START HEAD -->
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Enervee Efficient Product Finder</title>
+    <title>PG&E</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css" type="text/css">
-
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="assets/ie.css" type="text/css">
-    <![endif]-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css-pge.css" type="text/css">
 
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
-    <script src="assets/less/less.min.js" type="text/javascript"></script>
-    <script src="assets/modernizr/modernizr.custom.80207.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="../assets/modernizr/modernizr.custom.80207.js" type="text/javascript"></script>
     <script src="../assets/script.js" type="text/javascript"></script>
 </head>
-<!-- HEAD END -->
+<!-- END HEAD -->
 
 
 
@@ -34,8 +28,7 @@
         <nav id="topnav">
             <div class="container-fluid">
                 <a class="logo" href="index.html">
-                    <img class="hidden-xs" src="assets/img/logo-energizect-white.png" alt="Energize Connecticut">
-                    <img class="visible-xs" src="assets/img/logo-energizect-white-small.png" alt="Energize Connecticut">
+                    <img src="assets/img/logo-pge-white.png" alt="PG&E">
                 </a>
                 <ul class="nav">
                     <li><a href=""><span class="hidden-xs">your state: </span>CA <i class="fa fa-sort-desc"></i></a></li>
@@ -49,13 +42,13 @@
         </nav>
 
         <section id="dropdown-search" class="dropdown collapse">
-            <div class="section section-darkest">
+            <div class="section section-dropdown">
                 <div class="container">
-                    <p class="subtitle">Search for Products:</p>
+                    <p class="title">Search for a product</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-9">
-                            <form>
-                                <div class="search">
+                            <form class="form">
+                                <div class="item search">
                                     <input type="text" placeholder="brand, model, or appliance type...">
                                     <button type="button"><i class="fa fa-search"></i></button>
                                 </div>
@@ -65,32 +58,42 @@
 
                     <hr>
 
-                    <div class="categories row">
-                        <div class="category col-xs-6 col-md-3">
-                            <p class="subtitle">Appliances</p>
-                            <ul class="nav nav-topic">
-                                <li><a href="results.html">Clothes Dryers</a></li>
-                                <li><a href="results.html">Clothes Washers</a></li>
-                                <li><a href="results.html">Dishwashers</a></li>
-                                <li><a href="results.html">Freezers</a></li>
-                                <li><a href="results.html">Refrigerators</a></li>
-                            </ul>
-                        </div>
+                    <p class="title">Search by category</p>
 
-                        <div class="category col-xs-6 col-md-3">
-                            <p class="subtitle">Electronics</p>
+                    <div class="categories row">
+                        <div class="category col-xs-6 col-sm-6 col-md-3">
+                            <p class="heading">TV & Video</p>
                             <ul class="nav nav-topic">
                                 <li><a href="results.html">Televisions</a></li>
-                                <li><a href="results.html">Monitors</a></li>
+                                <li><a href="results.html">Projectors</a></li>
+                                <li><a href="results.html">Video Game Consoles</a></li>
                             </ul>
                         </div>
 
-                        <div class="category col-xs-6 col-md-3">
-                            <p class="subtitle">Other</p>
+                        <div class="category col-xs-6 col-sm-6 col-md-3">
+                            <p class="heading">Computers</p>
                             <ul class="nav nav-topic">
-                                <li><a href="results.html">Lighting</a></li>
-                                <li><a href="results.html">Gas Water Heaters</a></li>
-                                <li><a href="results.html">Electric Water Heaters</a></li>
+                                <li><a href="results.html">Monitors</a></li>
+                                <li><a href="results.html">Tablets</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="category col-xs-6 col-sm-6 col-md-3">
+                            <p class="heading">Kitchen</p>
+                            <ul class="nav nav-topic">
+                                <li><a href="results.html">Refrigerators</a></li>
+                                <li><a href="results.html">Freezers</a></li>
+                                <li><a href="results.html">Dishwashers</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="category col-xs-6 col-sm-6 col-md-3">
+                            <p class="heading">Home</p>
+                            <ul class="nav nav-topic">
+                                <li><a href="results.html">Washers</a></li>
+                                <li><a href="results.html">Dryers</a></li>
+                                <li><a href="results.html">Air Conditions</a></li>
+                                <li><a href="results.html">Light Bulbs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -101,7 +104,7 @@
         <section id="hero">
             <div id="slogan">
                 <div class="container">
-                    <h1>Energize Connecticut<br class="visible-xs"> helps you choose<br>
+                    <h1>PG&E<br class="visible-xs"> helps you choose<br>
                     <strong>energy-saving</strong> products</h1>
                 </div>
             </div>
@@ -235,13 +238,13 @@
                 </ul>
             </div>
         </section>
-    </main>
 <!-- CONTENT END -->
 
 
 
 <!-- FOOTER START -->
-    <footer class="section section-darkest no-logo">
+    </main>
+    <footer class="section section-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -269,16 +272,16 @@
                 </div>
 
                 <div class="col-md-8 companies">
-                    <img src="assets/img/logo-energizect-footer.png"><p>Energize Connecticut<sup><small>SM</small></sup> helps you save money and use clean energy. It is an initiative of the Energy Efficiency Fund, the Clean Energy Finance and Investment Authority, the State and your local electric and gas utilities with funding from a charge on customer energy bills.</p>
+                    <img src="assets/img/logo-pge-footer.png"><p>PG&E<sup><small>SM</small></sup> helps you save money and use clean energy. It is an initiative of the Energy Efficiency Fund, the Clean Energy Finance and Investment Authority, the State and your local electric and gas utilities with funding from a charge on customer energy bills.</p>
                     <hr class="short">
-                    <img src="assets/img/footer-logo-enervee.png"><p>Energize Connecticut is using the Enervee<sup><small>&reg;</small></sup> data & marketing platform to capture, analyze and present all the latest appliances and electronics products.</p>
+                    <img src="assets/img/logo-enervee-footer.png"><p>PG&E is using the Enervee<sup><small>&reg;</small></sup> data & marketing platform to capture, analyze and present all the latest appliances and electronics products.</p>
                 </div>
             </div>
 
             <!-- <p class="disclaimer"><small></small></p> -->
 
-            <div id="copyright">
-                <small>&copy;2015 <a href="">Enervee Corporation</a>.<span class="break"> </span>All rights reserved.</small>
+            <div id="copyright" class="right">
+                &copy;2015 <a href="index.html">Enervee Corporation</a>.<span class="break"> </span>All rights reserved.
             </div>
         </div>
     </footer>
