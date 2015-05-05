@@ -1961,7 +1961,7 @@ footer #copyright .break {
     padding: 23px 15px 23px;
   }
   #header.has-hero #topnav {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: url('../../assets/img/topnav-gradient-70.png');
   }
   #header.has-hero #topnav a {
