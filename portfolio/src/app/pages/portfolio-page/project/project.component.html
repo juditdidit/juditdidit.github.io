@@ -44,8 +44,8 @@
             <section class="gallery">
                 <div *ngFor="let image of project.gallery; let i = index" class="wrapper">
                     <img
-                        [attr.srcset]="'/assets/img/' + project.portfolio + '/' + image + '@lg.png 2x'"
-                        [attr.src]="'/assets/img/' + project.portfolio + '/' + image + '.png'"
+                        [attr.srcset]="'/assets/img/' + project.category + '/' + image + '@lg.png 2x'"
+                        [attr.src]="'/assets/img/' + project.category + '/' + image + '.png'"
                         [attr.alt]="project.name + ' gallery ' + (i + 1)"
                     />
                 </div>

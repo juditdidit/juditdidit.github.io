@@ -3,10 +3,10 @@
         <div class="wrapper">
             <div *ngFor="let project of projects" class="project">
                 <img
-                    [attr.srcset]="'/assets/img/' + project.portfolio + '/' + project.thumbnail + '.png 2x'"
-                    [attr.src]="'/assets/img/' + project.portfolio + '/' + project.thumbnail + '@sm.png'"
+                    [attr.srcset]="'/assets/img/' + project.category + '/' + project.thumbnail + '.png 2x'"
+                    [attr.src]="'/assets/img/' + project.category + '/' + project.thumbnail + '@sm.png'"
                 >
-                <a [routerLink]="project.portfolio + '/' + project.slug"></a>
+                <a [routerLink]="(project.defaultCategory ?? project.category ) + '/' + project.slug"></a>
             </div>
         </div>
     </div>

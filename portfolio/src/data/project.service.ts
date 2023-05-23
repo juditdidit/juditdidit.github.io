@@ -12,17 +12,24 @@ export class ProjectService {
         return PROJECT;
     }
 
+    /**
+     * Get project that matches the slug given
+     */
     getProjectBySlug(slug: string): Project {
         const project = PROJECT.find(project => project.slug === slug);
         return project || PROJECT[0];
     }
 
-    getProjectsByPortfolio(portfolio: string): Project[] {
+    /**
+     * Get all projects that fit the given category,
+     * and any projects under the "shared" category.
+     */
+    getProjectsByPortfolio(category: string): Project[] {
         let projects: Project[] = [];
         PROJECT.find(project => {
-            if (project.portfolio === portfolio) {
+            if (project.category === category) {
                 projects.push(project);
-            } else if (project.portfolio === 'shared') {
+            } else if (project.category === 'shared') {
                 projects.push(project);
             }
         });
