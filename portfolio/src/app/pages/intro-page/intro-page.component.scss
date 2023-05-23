@@ -1,0 +1,21 @@
+@import "variables";
+
+main {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: $primary;
+    color: $white;
+    height: 100%;
+}
+
+app-logo {
+    max-width: 200px;
+    fill: $white;
+    margin: 0 auto 2rem;
+}
+
+h1 {
+    margin: 0;
+    color: inherit;
+}

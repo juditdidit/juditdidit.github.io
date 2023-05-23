@@ -1,0 +1,39 @@
+@import "variables";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @media (min-width: $screen-size-lg) {
+        flex-direction: row;
+    }
+}
+
+app-site-nav {
+    flex-grow: 0;
+}
+
+app-sidebar {
+    display: none;
+}
+
+@media (min-width: $screen-size-lg) {
+    app-site-nav {
+        display: none;
+    }
+
+    app-sidebar {
+        display: block;
+        width: $sidebar-width;
+        flex-shrink: 0;
+    }
+
+    app-footer {
+        display: none;
+    }
+}
+
+.site-wrapper {
+    flex-grow: 1;
+}
