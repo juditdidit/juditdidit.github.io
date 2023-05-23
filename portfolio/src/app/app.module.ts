@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { APP_BASE_HREF } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
@@ -32,7 +33,9 @@ import { SiteNavComponent } from './shared/site-nav/site-nav.component';
         BrowserModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [{
+        provide: APP_BASE_HREF, useValue: 'https://juditdidit.github.io',
+    }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
