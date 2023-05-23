@@ -1,0 +1,53 @@
+@import "variables";
+
+:host(.header) {
+    padding: 1rem;
+    border-bottom: $border;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        app-logo {
+            width: 40px;
+        }
+
+        figure {
+            ul {
+                display: inline-block;
+
+                li {
+                    display: inherit;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+:host:not(.header) {
+    nav {
+        app-logo {
+            margin-bottom: 3rem;
+            width: 60px;
+        }
+    }
+
+    figure {
+        li + li {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+nav {
+    app-logo {
+        fill: $primary;
+        transition: fill $transition-length;
+
+        &:hover {
+            fill: $body-color;
+        }
+    }
+}

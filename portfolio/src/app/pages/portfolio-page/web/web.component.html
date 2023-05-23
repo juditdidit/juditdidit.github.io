@@ -1,0 +1,13 @@
+<main class="portfolio">
+    <div class="container">
+        <div class="wrapper">
+            <div *ngFor="let project of projects" class="project">
+                <img
+                    [attr.srcset]="'/assets/img/' + project.portfolio + '/' + project.thumbnail + '.png 2x'"
+                    [attr.src]="'/assets/img/' + project.portfolio + '/' + project.thumbnail + '@sm.png'"
+                >
+                <a [routerLink]="project.slug"></a>
+            </div>
+        </div>
+    </div>
+</main>

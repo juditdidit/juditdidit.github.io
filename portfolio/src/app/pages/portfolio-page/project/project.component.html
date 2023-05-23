@@ -1,0 +1,55 @@
+<main>
+    <div class="container">
+        <div class="project">
+            <section class="info">
+                <h2>{{ project.name }}</h2>
+
+                <ng-container *ngIf="project.description">
+                    <div class="description">
+                        <p *ngFor="let description of project.description">
+                            {{ description }}
+                        </p>
+                    </div>
+                </ng-container>
+
+                <div *ngIf="project.tags" class="tags">
+                    <ul>
+                        <ng-container *ngFor="let tag of project.tags">
+                            <li [ngClass]="tag.type">{{ tag.name }}</li>
+                        </ng-container>
+                    </ul>
+                </div>
+
+                <div class="details">
+                    <div *ngIf="project.type">
+                        <h3>Work type</h3>
+                        {{ project.type }}
+                    </div>
+                    <div *ngIf="project.label">
+                        <h3>Label</h3>
+                        {{ project.label }}
+                    </div>
+                    <div *ngIf="project.link">
+                        <h3>Link</h3>
+                        <ng-container *ngFor="let link of project.link">
+                            <span><a [attr.href]="link.url" target="_blank">{{ link.text }}</a></span>
+                        </ng-container>
+                    </div>
+                    <div *ngIf="project.date">
+                        <h3>Date</h3>
+                        {{ project.date }}
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div *ngFor="let image of project.gallery; let i = index" class="wrapper">
+                    <img
+                        [attr.srcset]="'/assets/img/' + project.portfolio + '/' + image + '@lg.png 2x'"
+                        [attr.src]="'/assets/img/' + project.portfolio + '/' + image + '.png'"
+                        [attr.alt]="project.name + ' gallery ' + (i + 1)"
+                    />
+                </div>
+            </section>
+        </div>
+    </div>
+</main>

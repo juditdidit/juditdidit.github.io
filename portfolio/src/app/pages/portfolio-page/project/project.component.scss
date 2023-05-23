@@ -1,0 +1,113 @@
+@import "variables";
+
+.container {
+    max-width: 1000px;
+}
+
+.project {
+    .info {
+        .description {
+            padding-bottom: 1.4rem;
+            border-bottom: $border;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .tags {
+            border-bottom: $border;
+
+            ul {
+                $tag-spacing: 0.5rem;
+
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 1.4rem;
+                margin-right: -($tag-spacing);
+                padding-bottom: (1.4rem - $tag-spacing);
+                font-weight: $fw-bold;
+
+                .skill {
+                    background-color: $dark;
+                }
+
+                .tool {
+                    background-color: $light;
+                    color: $text-muted;
+                }
+
+                li {
+                    display: inline-block;
+                    font-size: 0.75rem;
+                    line-height: 1;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: $radius-sm;
+                    margin-right: $tag-spacing;
+                    margin-bottom: $tag-spacing;
+                }
+            }
+        }
+
+        .details {
+            margin-top: 1.6rem;
+
+            div + div {
+                margin-top: 1.4rem;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                font-weight: $fw-bold;
+                font-size: 0.75em;
+                letter-spacing: 0.03em;
+                line-height: 1.2;
+                color: $text-muted;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .gallery {
+        margin-top: 1.4rem;
+        border-top: $border;
+        padding-top: 1.4rem;
+
+        .wrapper + .wrapper {
+            margin-top: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+
+@media (min-width: $screen-size-lg) {
+    .project {
+        display: flex;
+        align-items: flex-start;
+
+        section {
+            width: 50%;
+        }
+
+        .info {
+            padding-right: 4rem;
+            position: sticky;
+            top: $page-top;
+        }
+
+        .gallery {
+            width: 500px;
+            flex: 0 0 auto;
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+}

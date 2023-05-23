@@ -1,0 +1,23 @@
+@import "variables";
+
+:host {
+    border-right: $border;
+    position: relative;
+}
+
+section {
+    padding: 3rem 2rem 0;
+    height: 100vh;
+    width: $sidebar-width;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-top: 1px solid $light;
+}
