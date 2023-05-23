@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
 }
 
 main {
@@ -35,7 +37,8 @@ figure {
 }
 
 @media (min-width: $screen-size-lg) {
-    figure {
+    figure,
+    app-footer {
         display: none;
     }
 }
