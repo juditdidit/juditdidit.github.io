@@ -1,7 +1,8 @@
 export interface Project {
     name: string;
     slug: string;
-    portfolio: 'web' | 'graphics' | 'shared';
+    category: 'web' | 'graphics' | 'shared';
+    defaultCategory?: 'web' | 'graphics';
     tags?: Tag[];
     description?: Array<string>;
     type?: PROJECT_TYPE;
@@ -28,7 +29,7 @@ export const PROJECT: Project[] = [
     {
         name: 'juditdidit',
         slug: 'juditdidit',
-        portfolio: 'web',
+        category: 'web',
         tags: [
             { type: 'skill', name: 'Angular' },
             { type: 'skill', name: 'TypeScript' },
@@ -54,7 +55,8 @@ export const PROJECT: Project[] = [
     {
         name: 'Majestic Beards',
         slug: 'majesticbeards',
-        portfolio: 'shared',
+        category: 'shared',
+        defaultCategory: 'web',
         tags: [
             { type: 'skill', name: 'JavaScript' },
             { type: 'skill', name: 'LESS' },
@@ -85,7 +87,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Austin Walk',
         slug: 'austinwalk',
-        portfolio: 'graphics',
+        category: 'graphics',
         description: [
             "A minimalistic logo that combines the client's initials in a cool, strong color scheme.",
         ],
@@ -104,7 +106,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Crater',
         slug: 'crater',
-        portfolio: 'graphics',
+        category: 'graphics',
         description: [
             "Metal band Crater's brand identity. The logo was designed to depict a crater through the typography, and maintain easy readability of the band name.",
         ],
@@ -117,7 +119,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Antoine Law',
         slug: 'antoinelaw',
-        portfolio: 'graphics',
+        category: 'graphics',
         description: [
             'In 2012, Antoine Law was a Los Angeles-based law firm focused on Internet and Business law and litigation. The logo captures a friendly, signature-like initial.'
         ],
@@ -130,7 +132,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Toscana',
         slug: 'toscana',
-        portfolio: 'graphics',
+        category: 'graphics',
         description: [
             'Brand identity for Toscana Villas, a luxury apartment influenced by the Tuscan countryside.',
             "The logo's design was influenced by the rustic metal work decorating the windows and archways of the architecture.",
@@ -144,7 +146,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Hair',
         slug: 'hair',
-        portfolio: 'graphics',
+        category: 'graphics',
         description: [
             'A black-and-white illustration etched into stone and printed through lithography.',
             'Depicted here initial digital drawing.'
@@ -158,7 +160,7 @@ export const PROJECT: Project[] = [
     {
         name: 'DM Screen',
         slug: 'dmscreen',
-        portfolio: 'web',
+        category: 'web',
         tags: [
             { type: 'skill', name: 'Angular' },
             { type: 'skill', name: 'TypeScript' },
@@ -191,7 +193,7 @@ export const PROJECT: Project[] = [
     {
         name: 'Poké Recipe Book',
         slug: 'poke-recipebook',
-        portfolio: 'web',
+        category: 'web',
         tags: [
             { type: 'skill', name: 'Handlebars' },
             { type: 'skill', name: 'SCSS' },
