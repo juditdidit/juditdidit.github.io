@@ -1,12 +1,20 @@
 @import "variables";
 
-main {
-    display: flex;
-    align-items: center;
-    text-align: center;
+:host {
     background-color: $primary;
     color: $white;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
+}
+
+main {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 app-logo {
@@ -18,4 +26,28 @@ app-logo {
 h1 {
     margin: 0;
     color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+figure {
+    margin-top: 4rem;
+}
+
+.contact {
+    text-align: center;
+    padding-bottom: 1rem;
+
+    a + a {
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: $screen-size-lg) {
+    figure,
+    .footer {
+        display: none;
+    }
 }

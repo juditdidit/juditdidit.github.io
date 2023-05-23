@@ -1,6 +1,6 @@
-<app-site-nav class="header"></app-site-nav>
+<app-site-nav class="header" *ngIf="router.url !== '/'"></app-site-nav>
 <app-sidebar></app-sidebar>
 <div class="site-wrapper">
     <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
+<app-footer class="header" *ngIf="router.url !== '/'"></app-footer>
