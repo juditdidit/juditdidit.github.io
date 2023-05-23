@@ -1,0 +1,44 @@
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: $body-bg;
+}
+
+
+main {
+    padding: 1rem 0;
+
+    @media (min-width: $screen-size-lg) {
+        padding: $page-top 0 8rem;
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media (min-width: $screen-size-lg) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.site-wrapper {
+    display: flex;
+
+    router-outlet + * {
+        flex-grow: 1;
+    }
+}
