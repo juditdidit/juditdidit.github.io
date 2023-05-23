@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-weight: $fw-regular;
+    color: $body-color;
+    font-size: 16px; // define rem base
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-weight: $fw-bold;
+    font-size: 2rem;
+    color: $primary;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    font-weight: $fw-bold;
+    font-size: 1.5rem;
+    color: $primary;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+strong {
+    font-weight: $fw-bold;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+}
+
+small {
+    font-size: 0.8125em;
+}
