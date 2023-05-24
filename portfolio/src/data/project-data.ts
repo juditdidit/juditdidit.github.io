@@ -85,6 +85,61 @@ export const PROJECT: Project[] = [
         gallery: ['majesticbeards_reverse', 'majesticbeards_background', 'majesticbeards'],
     },
     {
+        name: 'Ugly Star',
+        slug: 'uglystar',
+        description: [
+            'Logo and album design for Florida-based cover band from the 2010s.',
+            'The logo was designed to spell out the band name through the visualization of a star-shaped symbol. The "ugly" comes from the jagged uneven lines.',
+        ],
+        category: 'graphics',
+        type: 'Professional work',
+        label: 'Logo design, album cover, packaging design',
+        date: 'December 2010',
+        thumbnail: 'uglystar_thumb',
+        gallery: [
+            'uglystar_thumb',
+            'uglystar_albumcover',
+            'uglystar_booklet_p1',
+            'uglystar_booklet_p2',
+            'uglystar_booklet_p3',
+            'uglystar_booklet_p4',
+            'uglystar_booklet_p5',
+            'uglystar_booklet_p6',
+            'uglystar_booklet_p7',
+            'uglystar_physical_01',
+            'uglystar_physical_02',
+            'uglystar_physical_03',
+        ]
+    },
+    {
+        name: 'Toscana',
+        slug: 'toscana',
+        category: 'graphics',
+        label: 'Brand identity, logo design, brochure design',
+        description: [
+            'Brand identity for Toscana Villas, a luxury apartment influenced by the Tuscan countryside.',
+            "The logo's design was influenced by the rustic metal work decorating the windows and archways of the architecture.",
+        ],
+        type: 'School project',
+        date: 'November 2011',
+        thumbnail: 'toscana_thumb',
+        gallery: ['toscana_thumb', 'toscana_brochure_01', 'toscana_brochure_02', 'toscana_brochure_03'],
+    },
+    {
+        name: 'Hair',
+        slug: 'hair',
+        category: 'graphics',
+        description: [
+            'A black-and-white illustration etched into stone and printed through lithography.',
+            'Depicted here initial digital drawing.'
+        ],
+        type: 'School project',
+        label: 'Illustration, lithography',
+        date: 'October 2012',
+        thumbnail: 'hair_thumb',
+        gallery: ['hair_vertical', 'hair_vertical_black'],
+    },
+    {
         name: 'Austin Walk',
         slug: 'austinwalk',
         category: 'graphics',
@@ -128,34 +183,6 @@ export const PROJECT: Project[] = [
         date: 'September 2012',
         thumbnail: 'antoinelaw_thumb',
         gallery: ['antoinelaw_thumb'],
-    },
-    {
-        name: 'Toscana',
-        slug: 'toscana',
-        category: 'graphics',
-        description: [
-            'Brand identity for Toscana Villas, a luxury apartment influenced by the Tuscan countryside.',
-            "The logo's design was influenced by the rustic metal work decorating the windows and archways of the architecture.",
-        ],
-        type: 'School project',
-        label: 'Brand identity',
-        date: 'November 2011',
-        thumbnail: 'toscana_thumb',
-        gallery: ['toscana_thumb'],
-    },
-    {
-        name: 'Hair',
-        slug: 'hair',
-        category: 'graphics',
-        description: [
-            'A black-and-white illustration etched into stone and printed through lithography.',
-            'Depicted here initial digital drawing.'
-        ],
-        type: 'School project',
-        label: 'Illustration, lithography',
-        date: 'October 2012',
-        thumbnail: 'hair_thumb',
-        gallery: ['hair_vertical', 'hair_vertical_black'],
     },
     {
         name: 'DM Screen',
@@ -228,5 +255,18 @@ export const PROJECT: Project[] = [
         date: 'May 2013',
         thumbnail: 'wcc_thumb',
         gallery: ['wcc_thumb'],
+    },
+    {
+        name: 'Hermes',
+        slug: 'hermes',
+        description: [
+            'Logo design for a messaging app.'
+        ],
+        category: 'graphics',
+        type: 'Professional work',
+        label: 'Logo design',
+        date: 'May 2014',
+        thumbnail: 'hermes',
+        gallery: ['hermes', 'hermes_alt'],
     }
 ];
