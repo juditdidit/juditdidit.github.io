@@ -216,4 +216,17 @@ export const PROJECT: Project[] = [
         thumbnail: 'poke-recipebook_thumb',
         gallery: ['poke-recipebook'],
     },
+    {
+        name: 'WCC',
+        slug: 'wcc',
+        category: 'graphics',
+        description: [
+            "An insignia combining the client's initials and his love for writing."
+        ],
+        type: 'Professional work',
+        label: 'Logo design',
+        date: 'May 2013',
+        thumbnail: 'wcc_thumb',
+        gallery: ['wcc_thumb'],
+    }
 ];
